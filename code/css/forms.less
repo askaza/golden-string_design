@@ -171,8 +171,7 @@ textarea {
     position:relative;
     text-decoration: none;
     white-space: nowrap;
-    .green-gradient;
-    .rounded;
+
 
     .btn__in {
 	color:#fff;
@@ -184,18 +183,6 @@ textarea {
 	vertical-align: top;
 	text-decoration: none;
 	text-align: center;
-    }
-
-    .ico {
-	position: absolute;
-	top:8px;
-	left:8px;
-    }
-    .ico_play-all {
-	left:12px;
-    }
-    .ico_envelope-white {
-	left:9px;
     }
 }
 @-moz-document url-prefix() {
@@ -214,19 +201,6 @@ input[type="button"] {
 	padding-left:27px;
     }
 }
-.btn_huge {
-    height:65px;
-    font-size:31px;
-    text-align: center;
-    font-family: @font-play;
-    .rounded(10px);
-
-    .btn__in {
-	 line-height:59px;
-	 padding:0 25px;
-    }
-}
-
 
     .btnset_right {
 	margin-left: 0 !important;
@@ -248,117 +222,9 @@ input[type="button"] {
 
 .form_standard {
 
-    .form-fields__item {
-	margin-bottom:25px;
-    }
 
-
-    .form-fields_inline .form-fields__item {
-	margin-left: 8px;
-    }
-
-    .field-label {
-	color:#000;
-	display: block;
-	font-size: 14px;
-	margin-bottom: 7px;
-	margin-top: -3px;
-
-	.not-required {
-	    color: #CECECE;
-	}
-    }
-
-    .field-box_radio {
-	font-size:12px;
-    }
-
-    .field_type_textarea,
-    .field_type_text,
-    .field_type_select {
-	border:1px solid #cecece;
-	width:458px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-    }
-    .field_type_textarea-message {
-	height:127px;
-    }
-
-    .field_state_warning {
-	border-color: #e0cd62;
-    }
-    .field_state_error {
-	border-color: #df9696;
-    }
-    .field_state_success {
-	border-color:#a5cf84;
-    }
-
-    .btnset {
-	margin-top:20px;
-	margin-left: 201px;
-    }
-
-    .btnset-text {
-	float: left;
-	line-height: 26px;
-	font-style: italic;
-    }
-
-    .field_day {
-	width:30px;
-    }
-
-    .field_mounth {
-	width:80px;
-    }
-    .field_year {
-	width:52px;
-    }
 
 }
-
-.form-section {
-    border-bottom:1px solid #ededed;
-    margin-bottom: 25px;
-    padding-bottom: 28px;
-
-    .form-fields__item:last-child {
-	margin-bottom:0;
-    }
-}
-
-.form-fields + .form-section__title {
-    margin-top:20px;
-    margin-bottom:0;
-}
-
-.form-section__title + .uploaded-files {
-    margin-top:5px;
-}
-
-
-.form-section__title {
-    font-size:18px;
-    display:block;
-    line-height: 24px;
-    margin-bottom: 24px;
-    color:#afafaf;
-}
-
-.field-error {
-    left: 501px;
-    position: absolute;
-    top: 14px;
-    width: 460px;
-
-    .information-message .information-message__text {
-	color:#afafaf;
-	font-style:normal;
-    }
-}
-
 
 /* form standard > */
 
@@ -374,43 +240,8 @@ input[type="button"] {
 	}
     }
 }
-.form-fields_3columns {
-    white-space:nowrap;
 
-    .form-fields__item {
-	margin-left:6px;
-	width:300px;
-    }
 
-    .field_type_text {
-	width:280px;
-    }
-
-    .field-box_icon {
-	.field {
-	    width:255px;
-	}
-    }
-}
-
-.form-fields_4columns {
-    white-space:nowrap;
-
-    .form-fields__item {
-	margin-left:6px;
-	width:222px;
-    }
-
-    .field_type_text {
-	width:202px;
-    }
-
-    .field-box_icon {
-	.field {
-	    width:178px;
-	}
-    }
-}
 
 /* custom select < */
 .jq-selectbox.field_type_select {
