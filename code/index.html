@@ -46,25 +46,25 @@
 </head>
 <body>
 
-
+    <div class="wrapper">
 
     <section class="section top"> <!-- top -->
 	<div class="section__in">
-	    <ul class="site-nav">
-		<li class="sitemap__item">
-		    <a href="#" class="link link_icon" title="На главную"><i class="ico ico_home"></i></a>
+	    <ul class="menu menu_top">
+		<li class="menu__item">
+		    <a href="#" class="menu__link link link_icon" title="На главную"><i class="ico ico_home"></i></a>
 		</li>
-		<li class="site-nav__item">
-		    <a href="#" class="link link_icon"><i class="ico ico_mail"></i> Написать письмо</a>
+		<li class="menu__item">
+		    <a href="#" class="menu__link link link_icon"><i class="ico ico_mail"></i> Написать письмо</a>
 		</li>
-		<li class="site-nav__item">
-		    <a href="#" class="link link_icon"><i class="ico ico_faq"></i> Вопросы-ответы</a>
+		<li class="menu__item">
+		    <a href="#" class="menu__link link link_icon"><i class="ico ico_faq"></i> Вопросы-ответы</a>
 		</li>
 	    </ul>
 
 	    <section class="auth">
-		<a href="#" class="link">Войти</a>
-		<a href="#" class="link">Регистрация</a>
+		<a href="#" class="auth__action link">Войти</a>
+		<a href="#" class="auth__action link">Регистрация</a>
 	    </section>
 
 	</div>
@@ -73,24 +73,30 @@
 
     <header class="section header"> <!-- header -->
 	<div class="section__in">
-	    <a href="#" class="logo"><img src="images/logo.svg" alt="Flowplay" title="Flowplay" width="115" height="15"/></a>
+            <div class="header__main">
+                <div class="logo">
+                    <a href="#" class="logo__link">
+                        <img class="logo__image" src="images/bg/logo.png" alt="Golden String" title="Golden String" width="316" height="81"/>
+                    </a>
+                </div> 
 
-	    <p class="shedule">
-		Интернет-магазин <br />
-		<span class="tel">8 (499) 343-83-48</span>  <span class="tel">8 (925) 898-45-55</span> <br />
-		<span class="work-time">Пн-пт с 10:00 до 22:00</span>
-	    </p>
+                <p class="shedule">
+                    Интернет-магазин <br />
+                    <span class="tel">8 (499) 343-83-48</span>  <span class="tel">8 (925) 898-45-55</span> <br />
+                    <span class="work-time">Пн-пт с 10:00 до 22:00</span>
+                </p>
 
-	    <ul class="list list_marked guaranties">
-		<li class="list__item">Гарантия качества продукции</li>
-		<li class="list__item">Доставка по России и СНГ</li>
-		<li class="list__item">Полная Конфиденциальность</li>
-	    </ul>
+                <ul class="list list_marked guaranties">
+                    <li class="list__item">Гарантия качества продукции</li>
+                    <li class="list__item">Доставка по России и СНГ</li>
+                    <li class="list__item">Полная Конфиденциальность</li>
+                </ul>
 
-	    <div class="shopping-cart">
-		<i class="ico ico_shopping-cart"></i>
-		<a href="#" class="shopping-cart_products">Товаров <span class="shopping-cart_products-count">43453</span></a>
-	    </div>
+                <div class="shopping-cart">
+                    <i class="ico ico_shopping-cart"></i>
+                    <a href="#" class="shopping-cart_products">Товаров <span class="shopping-cart_products-count">43453</span></a>
+                </div>
+            </div>
 
 	    <nav class="main-nav">
 		<ul class="menu menu_main">
@@ -522,7 +528,7 @@
 	</div>
     </footer>  <!-- /.footer -->
 
-
+    </div>
 
 </body>
 </html>

@@ -1,8 +1,13 @@
 /* layout < */
 
 body {
-    background: #ffffff;
-    min-width:960px;
+    background: #1f1913 url(../images/bg/body-bg.png) repeat;
+    min-width:980px;
+}
+.wrapper {
+    background: url(../images/bg/wall-bg.png) repeat-x 0 40px;
+    min-width:980px;
+    position: relative;
 }
 .section {
     position: relative;
@@ -10,59 +15,74 @@ body {
 .section__in {
     margin:0 auto;
     position: relative;
-    width:960px;
+    width:980px;
 }
 
 /* layout > */
 
 
 /* header < */
-.header {
-    background: #333333;
-    height: 50px;
-    overflow: hidden;
-    padding-top:50px;
-    position: relative;
-    z-index:50;
+
+.top {
+    background: #1e1a12;
+    border-bottom:1px solid #372e24;
+    height:40px;
+    
+    .menu_top {
+        left:0;
+       top:11px;
+       position: absolute; 
+    } 
 }
 
+.auth {
+    top:20px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    text-align: right;   
 
-.logo {
-    float:left;
-    margin: 19px 40px 0 0;
+    .auth__action {
+        color:@yellow;
+        display:inline-block;
+        vertical-align: top;
+        margin-left:20px;
+        letter-spacing: normal;
+    }
 
-    img {
-	display:block;
+}
+.header {    
+    background: url(../images/bg/header-bg.png) no-repeat 50% -40px;
+    height: 165px;  
+    position: relative;
+    
+    .logo {                
+        float:left;
+        
+        .logo__image,
+        .logo__link {
+           display: block; 
+        }
+    }
+    
+    .shedule {
+        float:left;
+        margin: 10px 0 0 40px;
+        width:310px;
+    }
+    
+    .guaranties {
+        float:left;
+    }
+    .shopping-cart {
+        float:right;
+        width:80px;    
     }
 }
-
 
 .nav {
     float: left;
     margin-left:129px;
-}
-
-.auth {
-    letter-spacing: -4px;
-    position: absolute;
-    right: 0;
-    top: 10px;
-    text-align: right;
-    overflow: hidden;
-    width: 410px;
-    z-index:10;
-
-    .auth__action {
-	display:inline-block;
-	vertical-align: top;
-	margin-left:20px;
-	letter-spacing: normal;
-
-	.user__img {
-	    margin-right:0;
-	}
-    }
-
 }
 
 
@@ -73,8 +93,13 @@ body {
 
 /* menu < */
 
+.menu {
+    list-style: none;
+}
+
 .menu__item {
     display: inline-block;
+    list-style: none;
     vertical-align: top;
 
     .link  {
