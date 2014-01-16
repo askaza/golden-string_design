@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/styles.css" />
 
     <script src="js/jquery-1.10.0.min.js"></script>
+    <script src="js/gradienttext.js"></script>
     <script src="js/jquery.slides.min.js"></script>
     <script src="js/jquery.formstyler.min.js"></script>
 
@@ -23,15 +24,34 @@
     <script>
 	$(function() {
 	    $("#slides").slidesjs({
-		width: 1900,
-		height: 350,
+		width: 980,
+		height: 240,
 		pagination: {
 		    active: true,
 		    effect: "fade"
-		}
-	    });
+		}, 
+                navigation: {
+                    active: false
+                },
+                 play: {
+                    active: true,
+                    auto: true,
+                    interval: 5000,
+                    effect: "fade"
+                  }, 
+                  effect: {                   
+                    fade: {
+                      speed: 500,                        
+                      crossfade: true                       
+                    }
+                  }
+                          });
 
 	    $('input[type="checkbox"]').styler();
+            
+            $('.section__title').gradientText({           
+                colors: ['#4e493b','#b4923b']                
+            });
 
 	  });
     </script>
@@ -131,14 +151,27 @@
 	<div class="section__in">
 
 	    <section class="slider"> <!-- .slider -->
-
+                <div class="slides" id="slides">
+                    <div class="slides__item">
+                        <a href="#" class="link"> <img class="slide__image" src="images/content/slide1.jpg" alt=""/></a>
+                        <strong class="slide__title"><a href="#" class="link">Товары высокого качества от производителя</a></strong>                     
+                    </div>  
+                    <div class="slides__item">
+                        <a href="#" class="link"> <img class="slide__image" src="images/content/slide2.jpg" alt=""/></a>
+                        <strong class="slide__title"><a href="#" class="link">Заголовок слайда</a></strong>                     
+                    </div> 
+                    <div class="slides__item">
+                        <a href="#" class="link"> <img class="slide__image" src="images/content/slide3.jpg" alt=""/></a>
+                        <strong class="slide__title"><a href="#" class="link">Уникальные урашения</a></strong>                     
+                    </div> 
+                </div>
 	    </section> <!-- /.slider -->
 
 	    <div class="columns-layout columns-layout_two">
 		<div class="sidebar"> <!-- .sidebar -->
 		    <section class="section">
-			<div class="section__in">
-			    <h2 class="section__header">Каталог</h2>
+			
+                        <div class="section__header"><h2 class="section__title">Каталог</h2></div>
 			    <div class="section__body">
 				<ul class="menu menu_catalog">
 				    <li class="menu__item menu__item_current">
@@ -177,11 +210,11 @@
 
 				</ul>
 			    </div>
-			</div>
+			
 		    </section>
 		    <section class="section">
-			<div class="section__in">
-			    <h2 class="section__header">Бренды</h2>
+			
+                        <div class="section__header"><h2 class="section__title">Бренды</h2></div>
 			    <div class="section__body">
 				<ul class="menu menu_brands">
 				    <li class="menu__item">
@@ -209,12 +242,11 @@
 					<a class="menu__link" href="#">Casmir</a>
 				    </li>
 				</ul>
-			    </div>
-			</div>
+			    </div>			
 		    </section>
 		    <section class="section">
-			<div class="section__in">
-			    <h2 class="section__header">Просмотренные</h2>
+			
+                        <div class="section__header"><h2 class="section__title">Просмотренные</h2></div>
 			    <div class="section__body">
 				<ul class="products-list">
 				    <li class="products-list__item">
@@ -245,16 +277,15 @@
 					</div>
 				    </li>
 				</ul>
-			    </div>
-			</div>
+			    </div>			
 		    </section>
 		</div> <!-- /.sidebar -->
 		<div class="page-content"> <!-- .page-content -->
-                    <section class="section">
-			<div class="section__in">
-			    <h2 class="section__header">хиты
-                                <a href="#" class="link link_view-catalog">Показать все</a>
+                    <section class="section">			
+			    <div class="section__header"><h2 class="section__title section__title_special">хиты
                             </h2>
+                                <a href="#" class="link link_view-catalog">Показать все</a>
+                            </div>
 			    <div class="section__body">
 				<ul class="products-list">
 				    <li class="products-list__item">
@@ -285,19 +316,21 @@
 					</div>
 				    </li>
 				</ul>
-			    </div>
-			</div>
+			    </div>			
 		    </section>
                     
                     <a href="#" class="banner banner_content">
-                        <img src="images/content/banner1.png" alt="" title="" />
+                        <p class="banner__text"><span class="marked">Наш товар является замечательным подарком</span> и мы можем <br />
+                            упаковать его в любую подарочную упаковку! </p>
+                        <img class="banner__image" src="images/content/banner.png" alt="" title="" />
                     </a>
                     
                      <section class="section">
-			<div class="section__in">
-			    <h2 class="section__header">Новинки
-                                <a href="#" class="link link_view-catalog">Показать все</a>
+			
+			    <div class="section__header"><h2 class="section__title section__title_special">Новинки
                             </h2>
+                                <a href="#" class="link link_view-catalog">Показать все</a>
+                            </div>
 			    <div class="section__body">
 				<ul class="products-list">
 				    <li class="products-list__item">
@@ -328,15 +361,14 @@
 					</div>
 				    </li>
 				</ul>
-			    </div>
-			</div>
+			    </div>			
 		    </section>
                     
-                    <section class="section">
-			<div class="section__in">
-			    <h2 class="section__header">Новинки
-                                <a href="#" class="link link_view-catalog">Показать все</a>
+                    <section class="section">			
+			    <div class="section__header"><h2 class="section__title section__title_special">Спецпредложения
                             </h2>
+                                <a href="#" class="link link_view-catalog">Показать все</a>
+                            </div>
                             <div class="section__body">
                                 <ul class="products-list">
                                     <li class="products-list__item">
@@ -415,12 +447,11 @@
                                         </div>
                                     </li>
 				</ul>
-			    </div>
-			</div>
+			    </div>			
 		    </section>
                     
                     <section class="section section_type_border">
-                        <h2 class="section__header"> Сексуальное женское нижнее белье </h2>
+                        <div class="section__header"><h2 class="section__title"> Сексуальное женское нижнее белье </h2></div>
                         <div class="section__body">
                             <div class="pure-content">
                                 <p>
@@ -475,7 +506,7 @@
             <div class="partners-line">
                 <span class="partners-line__text">Доставка по России и СНГ:</span>
                 <ul class="logos-list">
-                    <li class="logos-list__item"><img src="images/content/еms.png" alt="еms" title="еms"/></li>
+                    <li class="logos-list__item"><img src="images/content/ems.png" alt="еms" title="еms"/></li>
                     <li class="logos-list__item"><img src="images/content/dhl.png" alt="еms" title="еms"/></li>
                     <li class="logos-list__item"><img src="images/content/pony.png" alt="еms" title="еms"/></li>
                 </ul>
@@ -483,11 +514,11 @@
             <div class="partners-line">
                 <span class="partners-line__text">Оплата любыми удобными для Вас способами:</span>
                 <ul class="logos-list">
-                    <li class="logos-list__item"><img src="images/content/elexnet.png" alt="еms" title="еms"/></li>
+                    <li class="logos-list__item"><img src="images/content/elex.png" alt="еms" title="еms"/></li>
                     <li class="logos-list__item"><img src="images/content/wm.png" alt="еms" title="еms"/></li>
                     <li class="logos-list__item"><img src="images/content/alfa.png" alt="еms" title="еms"/></li>
                     <li class="logos-list__item"><img src="images/content/qiwi.png" alt="еms" title="еms"/></li>
-                    <li class="logos-list__item"><img src="images/content/mastercard.png" alt="еms" title="еms"/></li>
+                    <li class="logos-list__item"><img src="images/content/mc.png" alt="еms" title="еms"/></li>
                     <li class="logos-list__item"><img src="images/content/vtb.png" alt="еms" title="еms"/></li>
                     <li class="logos-list__item"><img src="images/content/yd.png" alt="еms" title="еms"/></li>
                     <li class="logos-list__item"><img src="images/content/visa.png" alt="еms" title="еms"/></li>

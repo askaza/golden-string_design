@@ -61,7 +61,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 /* colors > */
 
 @color-text:#bbbbba;
-@color-text-link:#77683f;
+@color-text-link:#a18c56;
 @yellow:#bc942f;
 @gray:#4e493b;
 
@@ -75,9 +75,11 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 /* fonts > */
 @font-family-opensans:'open_sansregular', Tahoma, sans-serif;
 @font-family-opensans-bold:'open_sansbold', Tahoma, sans-serif;
+@font-family-opensans-semibold:'open_semisansbold', Tahoma, sans-serif;
 @font-family-opensans-light:'open_sanslight', Tahoma, sans-serif;
+@font-family-opensans-light-it:'open_sanslight_italic',Tahoma, sans-serif;
 
-@font-normal:@font-family-opensans;
+@font-normal:@font-family-opensans-light;
 
 .rounded(@radius: 4px) {
   -webkit-border-radius: @radius;
@@ -119,9 +121,23 @@ a {
     text-decoration:none;
 }
 p {
-	margin-bottom:10px;
+    margin-bottom:10px;
+    font-size:14px;
 }
-.text-content {
+
+h6 {
+    color:@yellow;
+    margin-bottom:10px;
+}
+
+.pure-content {
+    font-size:14px;
+    
+    strong {
+        font-family: @font-family-opensans-bold;
+        color: @color-text-link;
+    }
+    
 	ul, ol {
 		margin:0 0 10px 20px;
 	}
@@ -152,7 +168,8 @@ p {
 .clearfix:after,
 .section:after,
 .section__in:after,
-.header__main:after {
+.header__main:after, 
+.columns-layout:after {
 	content:"";
 	clear:both;
 	display:block;
