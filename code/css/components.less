@@ -37,8 +37,19 @@ body {
     
     .menu_top {
        left:0;
-       top:11px;
+       top:9px;
        position: absolute; 
+       
+       .menu__item {
+           margin-right: 20px;
+           vertical-align: middle;
+       }
+       .menu__link {
+            line-height: 20px;
+       }
+       .ico {
+           margin-right:3px;          
+       }
     } 
 }
 
@@ -60,8 +71,13 @@ body {
 }
 .header {    
     background: url(../images/bg/header-bg.png) no-repeat 50% -40px;
-    height: 165px;  
+    height: 165px;          
+    margin-bottom: 20px;
     position: relative;
+    
+    .header__main {
+        height: 113px;
+    }
     
     .logo {                
         float:left;
@@ -73,17 +89,51 @@ body {
     }
     
     .shedule {
+        color:#4e493b;
         float:left;
+        font-size:16px;
+        line-height: 30px;
         margin: 10px 0 0 40px;
         width:310px;
+        
+        .tel {
+            color:@yellow;
+        }
     }
     
     .guaranties {
         float:left;
+        
+        .list__item {
+            background: url(../images/bg/marked-list1.png) no-repeat 0 11px;
+            color:#a18c56;
+            font-size:13px;
+            line-height: 27px;
+            padding-left: 10px;
+        }
     }
     .shopping-cart {
         float:right;
-        width:80px;    
+        margin-top:20px;
+        width:85px; 
+        
+        .shopping-cart_products {
+            color:#4e493b;
+            display: block;
+            margin-top:5px;
+            position: relative;
+            white-space: nowrap;
+        }
+        
+        .shopping-cart_products-count {
+            color:@yellow;            
+            text-align: right;            
+            position: absolute;
+            right:0;
+            top:0;      
+            overflow: hidden;
+            width:32px;           
+        }
     }
 }
 
@@ -115,7 +165,7 @@ body {
 .main-nav {
     border-top:1px solid #372e24;
     border-bottom:1px solid #372e24;
-    height:50px;
+    height:50px; 
     
     .menu_main {
         text-align: justify;
@@ -294,7 +344,7 @@ body {
 .logos-list {
     .logos-list__item {
         display: inline-block;
-        margin-right:15px;
+        margin-right:9px;
         vertical-align: middle;
     }
 }
@@ -402,7 +452,7 @@ body {
 .section_type_border {
     background:#1c1810;
     border:1px solid #282119;
-    padding:0 20px;
+    padding:0 20px 10px;
     
     .section__header {
         .section__title {
@@ -576,15 +626,28 @@ body {
     border-top:1px solid #211e1b;
     height: 175px;
     
+    .partners-line {
+        padding-top:20px;
+    }
+    
     .logos-list {
          display: inline-block;
-         vertical-align: top;
+         vertical-align: middle;
+    }
+    
+    .guaranties {
+        font-size: 13px;
+        font-family: @font-family-opensans-semibold;
+        padding-top:20px;
     }
 }
 
 .partners-line__text {
+    color:#4e493b;
     display: inline-block;
-    vertical-align: top;
+    font-size:13px;
+    padding-right: 5px;
+    vertical-align: middle;
 }
 
 /* partners > */
@@ -592,21 +655,51 @@ body {
 /* footer < */
 
 .footer {
-    height:120px;
+    height:105px;
+    padding-top:15px;
     
     .contacts {
         float:left;
+        color:#4e493b;
+        font-size:14px;
+        line-height: 30px;
+        
+        .link {
+            color:#fff;
+        }
     }
     
     .menu_footer {
         float:right;
+        
+        .menu__item {
+            margin-left:25px;
+            line-height: 30px;
+        }
+        .menu__link {
+            color:#fff;
+            font-size: 14px;
+        }
     }
     
     .copy {
+        color:#4e493b;
+        font-size:12px;
         position: absolute;
         right:0;
-        top:20px;
-    }
+        top:50px;
+        
+        .copy__text {
+           margin-right: 10px;
+           line-height: 11px;
+           vertical-align: bottom; 
+        }
+        
+        .link {
+            margin-left:8px;
+            vertical-align: bottom;
+        }
+    }    
 }
 
 /* footer > */
