@@ -717,17 +717,18 @@ body {
   color: #4E493B;
   float: left;
   font-size: 16px;
-  line-height: 30px;
-  margin: 17px 0 0 43px;
-  width: 311px;
+  line-height: 26px;
+  margin: 3px 0 0 85px;
+  width: 250px;
 }
 .header .shedule .tel {
   color: #bc942f;
+  display: block;
 }
 .header .shedule .work-time {
   font-size: 14px;
   display: block;
-  margin-top: -5px;
+  margin-top: -25px;
 }
 .header .guaranties {
   float: left;
@@ -1120,7 +1121,11 @@ body {
   width: 220px;
 }
 .products-list__item .product__image {
-  height: 228px;
+  height: 315px;
+  width: 220px;
+}
+.products-list__item .product__image img {
+  height: 315px;
   width: 220px;
 }
 .products-list__item .product__label {
