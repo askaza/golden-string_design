@@ -30,6 +30,10 @@ body {
     .section {
 	margin-bottom: 5px;
     }
+
+    .section_type_border:first-child {
+	margin-top:20px;
+    }
 }
 
 /* layout > */
@@ -740,3 +744,152 @@ body {
 }
 
 /* footer > */
+
+/* breadcrumbs < */
+
+.breadcrumbs {
+    margin:0 0 0 0;
+
+    .breadcrumbs__item {
+	display:inline;
+	margin-right:2px;
+
+	&:first-child {
+	    .link:before {
+		content:"";
+	    }
+	}
+    }
+
+    .link {
+	color:#a18c56;
+	font-size:13px;
+	display:inline;
+	position:relative;
+	padding-left:1px;
+
+	&:before {
+	    content:"\2192";
+	    display:inline;
+	    padding-right:4px;
+	}
+    }
+}
+
+
+
+/* breadcrumbs > */
+
+
+/* .preview < */
+
+.thumbnail {
+    border:2px solid #b48e2d;
+    background:#ffffff;
+    height:110px;
+    position:relative;
+    overflow:hidden;
+    text-align:left;
+    width:110px;
+    .rounded(50%);
+
+    .thumbnail__image-wrap {
+	display:table-cell;
+	height:110px;
+	vertical-align:middle;
+	text-align:center;
+	width:110px;
+    }
+
+    .thumbnail__image {
+	max-height:105px;
+	max-width:105px;
+	height:auto;
+	width:auto;
+    }
+}
+
+
+
+.preview {
+    overflow:hidden;
+
+    .preview__thumbnail {
+	float:left;
+	margin:12px 14px 12px 0;
+    }
+
+    .preview__content {
+	border-left:1px solid #282119;
+	color:#87816e;
+	margin:12px 0;
+	min-height:110px;
+	padding-left:13px;
+	position:relative;
+	overflow:hidden;
+
+	.link_view-catalog {
+	    bottom:0;
+	    right:0;
+	    position:absolute;
+	}
+    }
+}
+
+.preview + .preview {
+    margin-top:15px;
+}
+
+
+/* .preview > */
+
+/* .pagination < */
+
+.pagination {
+    border-top:1px solid #282119;
+    padding-top:20px;
+    position:relative;
+
+    .link {
+	background:#604f24;
+	color:#fff;
+	display:block;
+	height:19px;
+	line-height:19px;
+	text-align:center;
+	text-decoration:none;
+	width:19px;
+    }
+
+    .pages-list {
+	float:left;
+	overflow:hidden;
+	width:640px;
+
+	.page-list__item {
+	    float:left;
+	    margin-right:5px;
+	}
+
+	.page-list__item_active {
+	    .link {
+		background:#000000;
+	    }
+	}
+    }
+
+    .pagination__arrow {
+	line-height:17px;
+	top:20px;
+	position:absolute;
+    }
+    .pagination__arrow_prev {
+	right:24px;
+    }
+    .pagination__arrow_next {
+	right:0px;
+    }
+}
+
+
+/* .pagination > */
