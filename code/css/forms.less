@@ -14,23 +14,17 @@ select {
 .field-box {
     position:relative;
 }
-.field-box_icon {
-    .field {
-	padding:6px 35px 6px 10px;
-    }
-}
+
 textarea {
     overflow: auto;
     resize: none;
 }
 
 .field-label {
-    color:#666666;
+    color:@yellow;
     font-size:14px;
     position:relative;
     padding-right:10px;
-    margin-right: 9px;
-    letter-spacing: normal;
 }
 
 .field-label_required {
@@ -39,9 +33,7 @@ textarea {
 	position:absolute;
 	top:0;
 	right:0;
-
     }
-
 }
 
 .form-fields,
@@ -60,11 +52,13 @@ textarea {
 
 
 .field_type_text {
-    background: #ffffff;
-    height:15px;
-    padding: 6px 10px 6px 10px;
-    line-height: 14px;
-    .rounded;
+    background:#211d16;
+    border:1px solid #262119;
+    color:#77736B;
+    font-size:14px;
+    height:17px;
+    padding: 3px;
+
 }
 
 .field_type_textarea {
@@ -161,29 +155,18 @@ textarea {
 /* buttons < */
 
 .btn {
+    background: url(../images/bg/btn-bg.png) repeat-x 0 0;
     color:#fff;
     cursor: pointer;
-    height: 27px;
+    height: 25px;
     display: inline-block;
     font-size:14px;
     vertical-align: top;
     line-height: 26px;
     position:relative;
     text-decoration: none;
+    text-align: center;
     white-space: nowrap;
-
-
-    .btn__in {
-	color:#fff;
-	cursor: pointer;
-	height: 100%;
-	line-height: 26px;
-	display: inline-block;
-	padding:0 10px;
-	vertical-align: top;
-	text-decoration: none;
-	text-align: center;
-    }
 }
 @-moz-document url-prefix() {
     input[type="submit"],
@@ -194,12 +177,6 @@ textarea {
 input[type="submit"],
 input[type="button"] {
     cursor: pointer;
-}
-.btn_icon {
-
-    .btn__in {
-	padding-left:27px;
-    }
 }
 
     .btnset_right {
@@ -212,10 +189,6 @@ input[type="button"] {
 	text-align: center;
     }
 
-    .btn_reg {
-	text-align: center;
-	width: 365px;
-    }
 /* buttons > */
 
 /* form standard < */

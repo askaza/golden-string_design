@@ -366,6 +366,11 @@ h6 {
   border-width: 4.5px 5px 4.5px 0;
   border-color: transparent #ffffff transparent transparent;
 }
+.ico_remove {
+  background-position: 0 -90px;
+  height: 9px;
+  width: 9px;
+}
 form,
 input,
 textarea,
@@ -381,20 +386,15 @@ select {
 .field-box {
   position: relative;
 }
-.field-box_icon .field {
-  padding: 6px 35px 6px 10px;
-}
 textarea {
   overflow: auto;
   resize: none;
 }
 .field-label {
-  color: #666666;
+  color: #bc942f;
   font-size: 14px;
   position: relative;
   padding-right: 10px;
-  margin-right: 9px;
-  letter-spacing: normal;
 }
 .field-label_required:after {
   content: "*";
@@ -416,13 +416,12 @@ textarea {
   letter-spacing: normal;
 }
 .field_type_text {
-  background: #ffffff;
-  height: 15px;
-  padding: 6px 10px 6px 10px;
-  line-height: 14px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  background: #211d16;
+  border: 1px solid #262119;
+  color: #77736B;
+  font-size: 14px;
+  height: 17px;
+  padding: 3px;
 }
 .field_type_textarea {
   background: #ffffff;
@@ -514,27 +513,18 @@ textarea {
 /* custom-fields > */
 /* buttons < */
 .btn {
+  background: url(../images/bg/btn-bg.png) repeat-x 0 0;
   color: #fff;
   cursor: pointer;
-  height: 27px;
+  height: 25px;
   display: inline-block;
   font-size: 14px;
   vertical-align: top;
   line-height: 26px;
   position: relative;
   text-decoration: none;
-  white-space: nowrap;
-}
-.btn .btn__in {
-  color: #fff;
-  cursor: pointer;
-  height: 100%;
-  line-height: 26px;
-  display: inline-block;
-  padding: 0 10px;
-  vertical-align: top;
-  text-decoration: none;
   text-align: center;
+  white-space: nowrap;
 }
 @-moz-document url-prefix() {
   input[type="submit"],
@@ -546,9 +536,6 @@ input[type="submit"],
 input[type="button"] {
   cursor: pointer;
 }
-.btn_icon .btn__in {
-  padding-left: 27px;
-}
 .btnset_right {
   margin-left: 0 !important;
   text-align: right;
@@ -556,10 +543,6 @@ input[type="button"] {
 .btnset_center {
   margin-left: 0 !important;
   text-align: center;
-}
-.btn_reg {
-  text-align: center;
-  width: 365px;
 }
 /* buttons > */
 /* form standard < */
@@ -896,6 +879,7 @@ body {
 }
 .menu_brands .menu__item_current .menu__link {
   color: #4b4637;
+  cursor: default;
 }
 /* menu > */
 /* slider < */
@@ -1089,6 +1073,9 @@ body {
 .section .section__header .section__title_special {
   display: block;
   text-align: center;
+}
+.section .section__header + .section_type_border {
+  margin-top: -21px;
 }
 .section_type_border {
   background: #1c1810;
@@ -1335,6 +1322,9 @@ body {
 }
 /* breadcrumbs > */
 /* .preview < */
+.preview {
+  padding-bottom: 0;
+}
 .thumbnail {
   border: 2px solid #b48e2d;
   background: #ffffff;
@@ -1425,3 +1415,80 @@ body {
   right: 0px;
 }
 /* .pagination > */
+/* catalog-filter < */
+.page-content .catalog-filter {
+  border-bottom: 1px solid #282119;
+  margin: 20px 0;
+  padding-bottom: 20px;
+}
+.filter__label {
+  color: #77736b;
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  padding-right: 4px;
+  vertical-align: middle;
+}
+.filter-list {
+  display: inline-block;
+  vertical-align: middle;
+}
+.filter-list .filter-list__item,
+.filter-list .field-label {
+  display: inline-block;
+  vertical-align: middle;
+}
+.filter-list.filter-list_sizes .filter-list__item {
+  margin-right: 5px;
+}
+.filter-list.filter-list_sizes .filter-list__item .link {
+  background: #211d16;
+  border: 1px solid #262119;
+  color: #bc942f;
+  font-size: 14px;
+  height: 23px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 23px;
+  width: 23px;
+}
+.filter-list.filter-list_sizes .filter-list__item_current .link {
+  background: #bc942f;
+  border: 0;
+  color: #fff;
+  height: 25px;
+  width: 25px;
+}
+.filter-list.filter-list_params .filter-list__item {
+  margin-right: 15px;
+}
+.filter-list.filter-list_params .field_type_text {
+  width: 30px;
+}
+.catalog-filter__action {
+  position: absolute;
+  right: 0;
+  top: 28px;
+}
+.catalog-filter__action .btn {
+  margin-right: 20px;
+  vertical-align: middle;
+  width: 95px;
+}
+.catalog-filter__action .link_clear {
+  font-family: 'open_sanslight_italic', Tahoma, sans-serif;
+  color: #bc942f;
+}
+.catalog-filter__action .link_clear .ico {
+  margin-right: 3px;
+  vertical-align: baseline;
+}
+.link_filter-change {
+  font-family: 'open_sanslight_italic', Tahoma, sans-serif;
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+}
+/* catalog-filter > */

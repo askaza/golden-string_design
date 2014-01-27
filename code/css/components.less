@@ -268,6 +268,7 @@ body {
      .menu__item_current  {
         .menu__link {
             color:#4b4637;
+	    cursor:default;
         }
     }
 
@@ -490,6 +491,10 @@ body {
 	    display:block;
             text-align: center;
         }
+    }
+
+    .section__header + .section_type_border {
+	margin-top:-21px;
     }
 }
 .section_type_border {
@@ -795,6 +800,9 @@ body {
 
 
 /* .preview < */
+.preview {
+    padding-bottom:0;
+}
 
 .thumbnail {
     border:2px solid #b48e2d;
@@ -906,3 +914,96 @@ body {
 
 
 /* .pagination > */
+
+/* catalog-filter < */
+
+.page-content .catalog-filter {
+    border-bottom:1px solid #282119;
+    margin:20px 0;
+    padding-bottom:20px;
+}
+
+.filter__label {
+    color:#77736b;
+    display:block;
+    font-size:14px;
+    margin-bottom:8px;
+    padding-right:4px;
+    vertical-align:middle;
+}
+.filter-list {
+    display:inline-block;
+    vertical-align:middle;
+
+    .filter-list__item,
+    .field-label    {
+	display:inline-block;
+	vertical-align:middle;
+    }
+
+    &.filter-list_sizes {
+	.filter-list__item {
+	    margin-right:5px;
+
+	    .link {
+		background:#211d16;
+		border:1px solid #262119;
+		color:@yellow;
+		font-size:14px;
+		height:23px;
+		display:inline-block;
+		vertical-align:middle;
+		text-align:center;
+		text-transform:uppercase;
+		line-height:23px;
+		width:23px;
+	    }
+	}
+	.filter-list__item_current {
+
+	    .link {
+		background:@yellow;
+		border:0;
+		color:#fff;
+		height:25px;
+		width:25px;
+	    }
+	}
+    }
+    &.filter-list_params {
+	.filter-list__item {
+	    margin-right:15px;
+	}
+	.field_type_text {
+	    width:30px;
+	}
+    }
+}
+
+.catalog-filter__action {
+    position:absolute;
+    right:0;
+    top:28px;
+
+    .btn {
+	margin-right:20px;
+	vertical-align:middle;
+	width:95px;
+    }
+    .link_clear {
+	font-family:@font-family-opensans-light-it;
+	color:@yellow;
+	.ico {
+	    margin-right:3px;
+	    vertical-align:baseline;
+	}
+    }
+}
+
+.link_filter-change {
+    font-family:@font-family-opensans-light-it;
+    display:block;
+    margin-top:10px;
+    text-align:center;
+}
+/* catalog-filter > */
