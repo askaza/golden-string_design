@@ -230,6 +230,11 @@ body {
              text-transform: uppercase;
              padding:5px 0;
         }
+	&.menu__item_current  {
+	    > .menu__link {
+		background: url(../images/bg/sidebar-menu-active-bg.png) repeat-y 0 0;
+	    }
+	}
     }
 
     .menu_sub {
@@ -259,6 +264,14 @@ body {
             font-size:14px;
         }
     }
+
+     .menu__item_current  {
+        .menu__link {
+            color:#4b4637;
+        }
+    }
+
+
 }
 
 /* menu > */

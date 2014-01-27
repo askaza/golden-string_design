@@ -869,6 +869,9 @@ body {
   text-transform: uppercase;
   padding: 5px 0;
 }
+.menu_catalog > .menu__item.menu__item_current > .menu__link {
+  background: url(../images/bg/sidebar-menu-active-bg.png) repeat-y 0 0;
+}
 .menu_catalog .menu_sub {
   padding: 4px 18px 4px;
 }
@@ -890,6 +893,9 @@ body {
 .menu_brands .menu__item .menu__link {
   color: #fff;
   font-size: 14px;
+}
+.menu_brands .menu__item_current .menu__link {
+  color: #4b4637;
 }
 /* menu > */
 /* slider < */
