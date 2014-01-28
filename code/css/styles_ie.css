@@ -9,7 +9,7 @@
 .products-list__item,
 .partners-line__text,
 .auth .auth__action,
-.ico {
+.categories-nav__line .ico {
   display: inline;
   zoom: 1;
 }

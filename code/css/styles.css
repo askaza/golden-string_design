@@ -253,7 +253,8 @@ h6 {
 .section:after,
 .section__in:after,
 .header__main:after,
-.columns-layout:after {
+.columns-layout:after,
+.categories-nav__line:after {
   content: "";
   clear: both;
   display: block;
@@ -1093,6 +1094,7 @@ body {
 /* product < */
 .product {
   position: relative;
+  width: 220px;
 }
 .product .product__image {
   display: block;
@@ -1299,7 +1301,7 @@ body {
 /* footer > */
 /* breadcrumbs < */
 .breadcrumbs {
-  margin: 0 0 0 0;
+  margin: 0 0 0 -4px;
 }
 .breadcrumbs .breadcrumbs__item {
   display: inline;
@@ -1373,6 +1375,25 @@ body {
 }
 .preview + .preview {
   margin-top: 15px;
+}
+.preview__title {
+  color: #bc942f;
+  font-size: 17px;
+}
+.preview_category .thumbnail {
+  height: 78px;
+  width: 78px;
+}
+.preview_category .thumbnail .thumbnail__image-wrap {
+  height: 78px;
+  width: 78px;
+}
+.preview_category .thumbnail .thumbnail__image {
+  max-height: 75px;
+  max-width: 75px;
+}
+.preview_category .preview__content {
+  min-height: 78px;
 }
 /* .preview > */
 /* .pagination < */
@@ -1492,3 +1513,48 @@ body {
   text-align: center;
 }
 /* catalog-filter > */
+/* .categories-nav <  */
+.categories-nav {
+  background: #1c1810 url(../images/bg/border-line.png) repeat-y 50% 0;
+  padding: 0;
+  overflow: hidden;
+}
+.categories-nav .categories-nav__item {
+  float: left;
+  margin-left: 15px;
+  margin-bottom: 0;
+  width: 320px;
+}
+.categories-nav .categories-nav__item:first-child {
+  margin-left: 0;
+  margin-right: 15px;
+}
+.categories-nav .categories-nav__item + .categories-nav__item {
+  margin-top: 0;
+}
+.categories-nav .categories-nav__line {
+  background: url(../images/bg/border-line.png) repeat-x 0 0;
+  margin: 0 14px;
+  padding: 0;
+  position: relative;
+}
+.categories-nav .categories-nav__line:first-child {
+  background-image: none;
+}
+.categories-nav .categories-nav__line:before {
+  background: #1c1810;
+  content: "";
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  margin-left: -15px;
+  bottom: -20px;
+  width: 30px;
+  z-index: 10;
+}
+.categories-nav .preview__content {
+  border-left: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+/* .categories-nav >  */
