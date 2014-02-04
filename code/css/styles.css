@@ -1435,6 +1435,13 @@ body {
 .pagination .pagination__arrow_next {
   right: 0px;
 }
+.pagination .pagination__all {
+  padding: 0 7px;
+  right: 60px;
+  top: 20px;
+  position: absolute;
+  font: 13px 'open_sanslight_italic', Tahoma, sans-serif;
+}
 /* .pagination > */
 /* catalog-filter < */
 .page-content .catalog-filter {
