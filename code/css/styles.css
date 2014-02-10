@@ -1399,6 +1399,7 @@ body {
 /* .pagination < */
 .pagination {
   border-top: 1px solid #282119;
+  height: 20px;
   padding: 20px 0;
   position: relative;
 }
