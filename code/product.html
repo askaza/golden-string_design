@@ -19,7 +19,9 @@
     <script src="js/gradienttext.js"></script>
     <script src="js/jquery.slides.min.js"></script>
     <script src="js/jquery.formstyler.min.js"></script>
-
+    <script src="js/jquery.carousel.js"></script>
+    <script src="js/jquery.elevatezoom.js"></script>
+    <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
 
     <script>
 	$(function() {
@@ -139,7 +141,7 @@
 
 		<div class="columns-layout columns-layout_wide">
 		    <div class="page-content"> <!-- .page-content -->
-                        <section  class="section section_type_border">
+                        <section  class="section section_type_border section_product">
                             <div class="section__header">
                                 <h2 class="section__title"> Сексуальное женское нижнее белье </h2>
                                 <div class="thumbnail">
@@ -153,29 +155,144 @@
                                     <div class="product__card">
                                         <div class="product__gallery">
                                             <a href="#" class="product__image"><img src="images/content/prod4.png" alt="Открытые стринги Valentine" title="Открытые стринги Valentine" /></a>
-                                        </div>
+
+
+					</div>
                                         <div class="product__buy-info">
-					    <div class="product__price-box">
+					    <div class="product__price-box product__price-box_special">
 						<span class="product__price">8 990 руб.</span>
 						<span class="product__price product__price_old">9 990 руб.</span>
-						<div class="savings">
-							<strong class="savings__value">+889 руб.</strong>
-							вернем на Ваш <a href="#" class="link">бонусный счет</a>
+						<div class="bonus">
+						    <strong class="bonus__value">+889 руб.</strong>
+						    вернем на Ваш <a href="#" class="link">бонусный счет</a>
+						</div>
+						<div class="product__sale">
+						    <div class="counter">
+							<span class="counter__title">До конца акции осталось:</span>
+							<ul class="timer">
+							    <li class="timer__item"><span class="number">12</span> <small class="unit">Дней</small></li>
+							    <li class="timer__item"><span class="number">5</span> <small class="unit">Часов</small></li>
+							    <li class="timer__item"><span class="number">55</span> <small class="unit">Мин</small></li>
+							    <li class="timer__item"><span class="number">45</span> <small class="unit">Сек</small></li>
+							</ul>
+						    </div>
+						    <div class="savings">
+							<span class="savings__title">Вы экономите:</span>
+							<strong class="savings__value">1200 руб.</strong>
+						    </div>
 						</div>
 					    </div>
-                                            <div class="product__sale">
-                                                <div class="counter">
-                                                    <span class="counter__title">До конца акции осталось:</span>
-                                                    <ul class="timer">
-                                                        <li class="timer__item"><span class="number">12</span> <small class="unit">Дней</small></li>
-                                                        <li class="timer__item"><span class="number">5</span> <small class="unit">Часов</small></li>
-                                                        <li class="timer__item"><span class="number">55</span> <small class="unit">Мин</small></li>
-                                                        <li class="timer__item"><span class="number">45</span> <small class="unit">Сек</small></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
+
+					    <div class="product__size">
+
+						<span class="filter__label">Размер:</span>
+						<ul class="filter-list filter-list_sizes">
+						    <li class="filter-list__item "><a href="javascript: void(0);" class="link">S</a></li>
+						    <li class="filter-list__item "><a href="javascript: void(0);" class="link">M</a></li>
+						    <li class="filter-list__item "><a href="javascript: void(0);" class="link">L</a></li>
+						    <li class="filter-list__item "><a href="javascript: void(0);" class="link">XL</a></li>
+						</ul>
+						<a href="#" class="link">Как определить размер?</a>
+					    </div>
+					    <div class="product__delivery">
+						<span class="product-available"> <i class="ico ico_check"></i> Товар доступен</span>
+						<a href="#" class="product-delivery"> <i class="ico ico_time"></i> Сроки доставки</a>
+					    </div>
+					    <div class="product__buy">
+						<a href="#" class="button button_style_gold button_size_large">Положить в корзину</a>
+						<a href="#" class="button button_style_dark button_size_large">Отложить на потом</a>
+					    </div>
+
+					    <a href="#" class="banner banner_content">
+						<p class="banner__text"><span class="marked">Наш товар является замечательным подарком</span> и мы можем <br />
+						    упаковать его в любую подарочную упаковку! </p>
+						<img class="banner__image" src="images/content/banner_sm_1.png" alt="" title="" />
+					    </a>
+
+					    <a href="#" class="banner banner_content">
+						<p class="banner__text">
+						    <span class="marked">Этот товар продается также в комплекте! </span>
+						    <span style="font-fize:16px">Купите его со скидкой!</span>
+						</p>
+						<img class="banner__image" src="images/content/banner_sm_2.png" alt="" title="" />
+					    </a>
+
                                         </div>
                                     </div>
+
+				    <div class="tabs tabs_content_information">
+					<ul class="tabs-title">
+					    <li class="tabs-title__item"><a class="link" href="#tab1"> Описание товара</a></li>
+					    <li class="tabs-title__item"><a class="link" href="#tab2">Отзывы покупателей</a></li>
+					    <li class="tabs-title__item"><a class="link" href="#tab3">Доставка и оплата</a></li>
+					</ul>
+					<div class="tabs__content" id="tab1">
+					    <div class="product__short-description pure-content">
+						<p>
+						    Хочет быть уникальной во всем: от выбор парфюма – до нижнего белья.
+						    Интернет-магазин нижнего белья Golden String поможет вам почувствовать себя единственной и неповторимой. </p>
+						<p>В нашем каталоге вы найдете элитное нижнее белье от ведущих мировых дизайнеров.
+						    Мы предлагаем вам коллекции известных брендов Bracli, Sylvie Monthule, Allure Lingerie,
+						    Coquette, LUXXA и Lola Luna. . Безупречное сочетание неординарных дизайнерских решений, современных тенденций моды.</p>
+					    </div>
+					    <div class="product__long-description pure-content">
+						<p>
+						    Хочет быть уникальной во всем: от выбор парфюма – до нижнего белья.
+						    Интернет-магазин нижнего белья Golden String поможет вам почувствовать себя единственной и неповторимой. </p>
+						<p>В нашем каталоге вы найдете элитное нижнее белье от ведущих мировых дизайнеров.
+						    Мы предлагаем вам коллекции известных брендов Bracli, Sylvie Monthule, Allure Lingerie,
+						    Coquette, LUXXA и Lola Luna. . Безупречное сочетание неординарных дизайнерских решений, современных тенденций моды.</p>
+						<p>
+						    Хочет быть уникальной во всем: от выбор парфюма – до нижнего белья.
+						    Интернет-магазин нижнего белья Golden String поможет вам почувствовать себя единственной и неповторимой. </p>
+						<p>В нашем каталоге вы найдете элитное нижнее белье от ведущих мировых дизайнеров.
+						    Мы предлагаем вам коллекции известных брендов Bracli, Sylvie Monthule, Allure Lingerie,
+						    Coquette, LUXXA и Lola Luna. . Безупречное сочетание неординарных дизайнерских решений, современных тенденций моды.</p>
+						<p>
+						    Хочет быть уникальной во всем: от выбор парфюма – до нижнего белья.
+						    Интернет-магазин нижнего белья Golden String поможет вам почувствовать себя единственной и неповторимой. </p>
+						<p>В нашем каталоге вы найдете элитное нижнее белье от ведущих мировых дизайнеров.
+						    Мы предлагаем вам коллекции известных брендов Bracli, Sylvie Monthule, Allure Lingerie,
+						    Coquette, LUXXA и Lola Luna. . Безупречное сочетание неординарных дизайнерских решений, современных тенденций моды.</p>
+					    </div>
+					    <div class="description-menu">
+						<a href="#" class="link link_descr-viewer">Подробное описание <i class="ico ico_arrow-left"></i></a>
+						<a href="#" class="link link_comment-viewer"><i class="ico ico_comments"></i> Посмотреть или написать отзыв </a>
+					    </div>
+					</div>
+					<div class="tabs__content"  id="tab2">
+
+					</div>
+					<div class="tabs__content"  id="tab3">
+					    тут текст со страницы про оплату и доставку
+					</div>
+				    </div>
+
+				    <div class="reasons">
+					<div class="pure-content">
+					    <h3>5 причин купить этот товар</h3>
+					    <ol class="reasons-list">
+						<li class="reasons-list__item"><strong>Хочет быть уникальной во всем: </strong>
+						    от выбор парфюма – до нижнего белья. Интернет-магазин нижнего белья Golden String
+						    поможет вам почувствовать себя единственной и неповторимой.
+						</li>
+						<li class="reasons-list__item"><strong>Хочет быть уникальной во всем: </strong>
+						    от выбор парфюма – до нижнего белья. Интернет-магазин нижнего белья
+						</li>
+						<li class="reasons-list__item"><strong>Хочет быть уникальной во всем: </strong>
+						    от выбор парфюма – до нижнего белья. Интернет-магазин нижнего белья Golden String
+						    поможет вам почувствовать себя единственной и неповторимой.
+						</li>
+						<li class="reasons-list__item"><strong>Хочет быть уникальной во всем: </strong>
+						    от выбор парфюма – до нижнего белья. Интернет-магазин нижнего белья
+						</li>
+						<li class="reasons-list__item"><strong>Хочет быть уникальной во всем: </strong>
+						    от выбор парфюма – до нижнего белья. Интернет-магазин нижнего белья Golden String
+						    поможет вам почувствовать себя единственной и неповторимой.
+						</li>
+					    </ol>
+					</div>
+				    </div>
                                 </div>
                             </div>
                         </section>
