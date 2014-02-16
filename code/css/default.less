@@ -120,7 +120,10 @@ body {
     color:@color-text-link;
     text-decoration:none;
 }
-
+.link_action {
+    font-family:@font-family-opensans-light-it;
+    font-size:12px;
+}
 p {
     margin-bottom:10px;
     font-size:14px;
@@ -138,6 +141,12 @@ h6 {
 .list_marked {
     list-style: none;
 }
+
+h3.small-title {
+    color:#a18c56;
+    font-size:20px;
+    margin-bottom:15px;
+}
 .pure-content {
     font-size:14px;
     line-height:20px;
@@ -154,6 +163,11 @@ h6 {
     h3 {
 	font-size: 18px;
 	margin-bottom:10px;
+    }
+    h3.small-title {
+	color:#a18c56;
+	font-size:20px;
+	margin-bottom:15px;
     }
     h4 {
 	font-size: 16px;
@@ -221,7 +235,8 @@ h6 {
 .header__main:after,
 .columns-layout:after,
 .categories-nav__line:after,
-.product__card:after {
+.product__card:after,
+.product-gallery-box:after {
 	content:"";
 	clear:both;
 	display:block;

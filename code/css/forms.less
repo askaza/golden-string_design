@@ -21,18 +21,18 @@ textarea {
 }
 
 .field-label {
-    color:@yellow;
+    color:#a18c56;
     font-size:14px;
     position:relative;
-    padding-right:10px;
+    margin-right:10px;
+    line-height: 28px;
+    float:left;
 }
 
 .field-label_required {
     &:after {
 	content:"*";
-	position:absolute;
-	top:0;
-	right:0;
+	color:#a18c56;
     }
 }
 
@@ -43,31 +43,32 @@ textarea {
     padding: 0;
 }
 .form-fields__item {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     position: relative;
     clear: both;
     display:block;
     letter-spacing: normal;
+    overflow:hidden;
 }
 
 
 .field_type_text {
-    background:#211d16;
+    background:#1c1810;
     border:1px solid #262119;
     color:#77736B;
     font-size:14px;
-    height:17px;
-    padding: 3px;
+    height:24px;
+    padding: 3px 8px;
 
 }
 
 .field_type_textarea {
-    background: #ffffff;
-    height:16px;
-    padding: 6px 10px 6px 10px;
-    .rounded;
-    vertical-align: top;
-    height: 80px;
+     background:#1c1810;
+    border:1px solid #262119;
+    color:#77736B;
+    font-size:14px;
+    padding: 3px 8px;
+    height:75px;
 }
 
 .field_type_select {
@@ -108,7 +109,7 @@ textarea {
     position: absolute;
 }
 .jq-checkbox.checked {
-    background: #fff url(../images/icons/check.svg) no-repeat 50% 50%;
+    background: #fff ;
     background-size: 9px 7px;
 }
 
@@ -156,17 +157,27 @@ textarea {
 
 .btn {
     background: url(../images/bg/btn-bg.png) repeat-x 0 0;
+    border:1px solid #000;
     color:#fff;
     cursor: pointer;
-    height: 25px;
+    height: 28px;
     display: inline-block;
     font-size:14px;
     vertical-align: top;
-    line-height: 26px;
+    line-height: 28px;
+    padding:0 8px;
     position:relative;
     text-decoration: none;
     text-align: center;
     white-space: nowrap;
+}
+
+input.btn {
+    height:30px;
+}
+.btn_style_dark {
+  background: url(../images/bg/btn-dark-bg.png) repeat-x 0 0;
+  color:#a18c56;
 }
 @-moz-document url-prefix() {
     input[type="submit"],
@@ -316,3 +327,16 @@ input[type="button"] {
     z-index: 20;
 }
 
+
+.form_comment {
+    .field-label {
+	width:85px;
+	float:left;
+    }
+
+    .field_type_text,
+    .field_type_textarea {
+	float:left;
+	width:803px;
+    }
+}

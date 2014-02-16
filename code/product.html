@@ -19,7 +19,7 @@
     <script src="js/gradienttext.js"></script>
     <script src="js/jquery.slides.min.js"></script>
     <script src="js/jquery.formstyler.min.js"></script>
-    <script src="js/jquery.carousel.js"></script>
+    <script src="js/jquery.jcarousel.js"></script>
     <script src="js/jquery.elevatezoom.js"></script>
     <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
 
@@ -32,9 +32,39 @@
 	    });
 
 	    $('.section__title').gradientText({
-                colors: ['#4e493b','#b4923b']
-            });
+		colors: ['#4e493b', '#b4923b']
+	    });
 
+	    $(".tabs").tabs();
+
+	    $('.link_descr-viewer').click(function() {
+		if ($('.product__long-description').is(':visible')) {
+
+		    $('.product__long-description').hide();
+		    $('.link_descr-viewer').html('Подробное описание <i class="ico ico_arrow-left"></i>');
+		} else {
+		    $('.product__long-description').show();
+		    $('.link_descr-viewer').html('Скрыть подробное описание <i class="ico ico_arrow-up"></i>');
+		}
+	    });
+
+	    $('.product-gallery-box').jcarousel();
+	    $('.jcarousel-prev').jcarouselControl({
+		target: '-=1'
+	    });
+
+	    $('.jcarousel-next').jcarouselControl({
+		target: '+=1'
+	    });
+
+	    //initiate the plugin and pass the id of the div containing gallery images
+//	$("#zoom_product").elevateZoom({
+//	    gallery:'gallery',
+//	    cursor: 'pointer',
+//	    galleryActiveClass: 'active',
+//	    imageCrossfade: true,
+//	    loadingIcon: 'http://www.elevateweb.co.uk/spinner.gif'});
+//
 	});
     </script>
 
@@ -154,8 +184,61 @@
                                 <div class="product">
                                     <div class="product__card">
                                         <div class="product__gallery">
-                                            <a href="#" class="product__image"><img src="images/content/prod4.png" alt="Открытые стринги Valentine" title="Открытые стринги Valentine" /></a>
 
+					    <div class="main-image"><img id="zoom_product" class="product__image" src="images/small/prod1.png" data-zoom-image="images/large/prod1.png"/></div>
+
+
+					    <div class="product-gallery-box">
+						<ul id="gallery123" class="product-gallery">
+						    <li class="product-gallery__item">
+							<a class="active" href="#" data-image="images/small/prod1.png" data-zoom-image="images/large/prod1.png">
+							    <img class="product__image" src="images/small/prod1.png" />
+							</a>
+						    </li>
+						    <li class="product-gallery__item">
+							<a href="#" data-image="images/small/prod2.png" data-zoom-image="images/large/prod2.png">
+							    <img class="product__image" src="images/small/prod2.png" />
+							</a>
+						    </li>
+						    <li class="product-gallery__item">
+							<a href="#" data-image="images/small/prod3.png" data-zoom-image="images/large/prod3.png">
+							    <img class="product__image" src="images/small/prod3.png" />
+							</a>
+						    </li>
+						    <li class="product-gallery__item">
+							<a href="#" data-image="images/mall/prod4.png" data-zoom-image="images/large/prod4.png">
+							    <img class="product__image" src="images/small/prod4.png" />
+							</a>
+						    </li>
+						    <li class="product-gallery__item">
+							<a href="#" data-image="images/small/prod5.png" data-zoom-image="images/large/prod5.png">
+							    <img class="product__image" src="images/small/prod5.png" />
+							</a>
+						    </li>
+						    <li class="product-gallery__item">
+							<a href="#" data-image="images/small/prod6.png" data-zoom-image="images/large/prod6.png">
+							    <img class="product__image" src="images/small/prod6.png" />
+							</a>
+						    </li>
+						</ul>
+					    </div>
+					    <div class="carousel-nav">
+						<a href="#" class="jcarousel-prev" title="Назад"></a>
+						<a href="#" class="jcarousel-next" title="Вперед"></a>
+					    </div>
+					    <script language='javascript'>
+						$("#zoom_product").elevateZoom({
+						    gallery: 'gallery123',
+						    cursor: 'pointer',
+						    galleryActiveClass: 'active',
+						    imageCrossfade: true,
+						    lensSize: 200,
+						    borderSize: 1,
+						    lensShape: 'square',
+						    loadingIcon: 'http://www.elevateweb.co.uk/spinner.gif'
+						});
+
+					    </script>
 
 					</div>
                                         <div class="product__buy-info">
@@ -164,7 +247,7 @@
 						<span class="product__price product__price_old">9 990 руб.</span>
 						<div class="bonus">
 						    <strong class="bonus__value">+889 руб.</strong>
-						    вернем на Ваш <a href="#" class="link">бонусный счет</a>
+						    вернем на Ваш <a href="#" class="link link_action">бонусный счет</a>
 						</div>
 						<div class="product__sale">
 						    <div class="counter">
@@ -192,29 +275,32 @@
 						    <li class="filter-list__item "><a href="javascript: void(0);" class="link">L</a></li>
 						    <li class="filter-list__item "><a href="javascript: void(0);" class="link">XL</a></li>
 						</ul>
-						<a href="#" class="link">Как определить размер?</a>
+						<a href="#" class="link link_action">Как определить размер?</a>
 					    </div>
 					    <div class="product__delivery">
-						<span class="product-available"> <i class="ico ico_check"></i> Товар доступен</span>
-						<a href="#" class="product-delivery"> <i class="ico ico_time"></i> Сроки доставки</a>
+						<span class="product-available"> <i class="ico ico_check"></i> Товар доступен!</span>
+						<a href="#" class="product-delivery-time"> <i class="ico ico_time"></i> Сроки доставки</a>
+					    </div>
+					    <div class="product__delivery">
+						<i class="ico ico_time"></i> Товар будет на складе через <strong>10 дней</strong>
 					    </div>
 					    <div class="product__buy">
-						<a href="#" class="button button_style_gold button_size_large">Положить в корзину</a>
-						<a href="#" class="button button_style_dark button_size_large">Отложить на потом</a>
+						<input type="button" class="btn" value="Положить в корзину" />
+						<input type="button" class="btn btn_style_dark" value="Отложить на потом"/>
 					    </div>
 
 					    <a href="#" class="banner banner_content">
-						<p class="banner__text"><span class="marked">Наш товар является замечательным подарком</span> и мы можем <br />
-						    упаковать его в любую подарочную упаковку! </p>
-						<img class="banner__image" src="images/content/banner_sm_1.png" alt="" title="" />
+						<p class="banner__text" style="font-size:14px; line-height:23px"><span class="marked">Наш товар является замечательным подарком</span> <br />и мы можем
+						    упаковать его в любую<br /> подарочную упаковку! </p>
+						<img class="banner__image" src="images/content/banner_sm_2.png" alt="" title="" />
 					    </a>
 
 					    <a href="#" class="banner banner_content">
 						<p class="banner__text">
-						    <span class="marked">Этот товар продается также в комплекте! </span>
-						    <span style="font-fize:16px">Купите его со скидкой!</span>
+						    <span class="marked" style="font-size:16px;">Этот товар продается также в комплекте! </span><br/>
+						    <span style="font-size:18px">Купите его со скидкой!</span>
 						</p>
-						<img class="banner__image" src="images/content/banner_sm_2.png" alt="" title="" />
+						<img class="banner__image" src="images/content/banner_sm_1.png" alt="" title="" />
 					    </a>
 
                                         </div>
@@ -226,51 +312,109 @@
 					    <li class="tabs-title__item"><a class="link" href="#tab2">Отзывы покупателей</a></li>
 					    <li class="tabs-title__item"><a class="link" href="#tab3">Доставка и оплата</a></li>
 					</ul>
-					<div class="tabs__content" id="tab1">
-					    <div class="product__short-description pure-content">
-						<p>
-						    Хочет быть уникальной во всем: от выбор парфюма – до нижнего белья.
-						    Интернет-магазин нижнего белья Golden String поможет вам почувствовать себя единственной и неповторимой. </p>
-						<p>В нашем каталоге вы найдете элитное нижнее белье от ведущих мировых дизайнеров.
-						    Мы предлагаем вам коллекции известных брендов Bracli, Sylvie Monthule, Allure Lingerie,
-						    Coquette, LUXXA и Lola Luna. . Безупречное сочетание неординарных дизайнерских решений, современных тенденций моды.</p>
+					<div class="tabs-content">
+					    <div class="tabs-content__item" id="tab1">
+						<div class="product__short-description pure-content">
+						    <p>
+							Хочет быть уникальной во всем: от выбор парфюма – до нижнего белья.
+							Интернет-магазин нижнего белья Golden String поможет вам почувствовать себя единственной и неповторимой. </p>
+						    <p>В нашем каталоге вы найдете элитное нижнее белье от ведущих мировых дизайнеров.
+							Мы предлагаем вам коллекции известных брендов Bracli, Sylvie Monthule, Allure Lingerie,
+							Coquette, LUXXA и Lola Luna. . Безупречное сочетание неординарных дизайнерских решений, современных тенденций моды.</p>
+						</div>
+						<div class="product__long-description pure-content">
+						    <p>
+							Хочет быть уникальной во всем: от выбор парфюма – до нижнего белья.
+							Интернет-магазин нижнего белья Golden String поможет вам почувствовать себя единственной и неповторимой. </p>
+						    <p>В нашем каталоге вы найдете элитное нижнее белье от ведущих мировых дизайнеров.
+							Мы предлагаем вам коллекции известных брендов Bracli, Sylvie Monthule, Allure Lingerie,
+							Coquette, LUXXA и Lola Luna. . Безупречное сочетание неординарных дизайнерских решений, современных тенденций моды.</p>
+						    <p>
+							Хочет быть уникальной во всем: от выбор парфюма – до нижнего белья.
+							Интернет-магазин нижнего белья Golden String поможет вам почувствовать себя единственной и неповторимой. </p>
+						    <p>В нашем каталоге вы найдете элитное нижнее белье от ведущих мировых дизайнеров.
+							Мы предлагаем вам коллекции известных брендов Bracli, Sylvie Monthule, Allure Lingerie,
+							Coquette, LUXXA и Lola Luna. . Безупречное сочетание неординарных дизайнерских решений, современных тенденций моды.</p>
+						    <p>
+							Хочет быть уникальной во всем: от выбор парфюма – до нижнего белья.
+							Интернет-магазин нижнего белья Golden String поможет вам почувствовать себя единственной и неповторимой. </p>
+						    <p>В нашем каталоге вы найдете элитное нижнее белье от ведущих мировых дизайнеров.
+							Мы предлагаем вам коллекции известных брендов Bracli, Sylvie Monthule, Allure Lingerie,
+							Coquette, LUXXA и Lola Luna. . Безупречное сочетание неординарных дизайнерских решений, современных тенденций моды.</p>
+						</div>
+						<div class="description-menu">
+						    <a href="javascript://" class="link link_descr-viewer">Подробное описание <i class="ico ico_arrow-left"></i></a>
+						    <a href="javascript://" class="link link_comment-viewer"><i class="ico ico_comments"></i> Посмотреть или написать отзыв </a>
+						</div>
 					    </div>
-					    <div class="product__long-description pure-content">
-						<p>
-						    Хочет быть уникальной во всем: от выбор парфюма – до нижнего белья.
-						    Интернет-магазин нижнего белья Golden String поможет вам почувствовать себя единственной и неповторимой. </p>
-						<p>В нашем каталоге вы найдете элитное нижнее белье от ведущих мировых дизайнеров.
-						    Мы предлагаем вам коллекции известных брендов Bracli, Sylvie Monthule, Allure Lingerie,
-						    Coquette, LUXXA и Lola Luna. . Безупречное сочетание неординарных дизайнерских решений, современных тенденций моды.</p>
-						<p>
-						    Хочет быть уникальной во всем: от выбор парфюма – до нижнего белья.
-						    Интернет-магазин нижнего белья Golden String поможет вам почувствовать себя единственной и неповторимой. </p>
-						<p>В нашем каталоге вы найдете элитное нижнее белье от ведущих мировых дизайнеров.
-						    Мы предлагаем вам коллекции известных брендов Bracli, Sylvie Monthule, Allure Lingerie,
-						    Coquette, LUXXA и Lola Luna. . Безупречное сочетание неординарных дизайнерских решений, современных тенденций моды.</p>
-						<p>
-						    Хочет быть уникальной во всем: от выбор парфюма – до нижнего белья.
-						    Интернет-магазин нижнего белья Golden String поможет вам почувствовать себя единственной и неповторимой. </p>
-						<p>В нашем каталоге вы найдете элитное нижнее белье от ведущих мировых дизайнеров.
-						    Мы предлагаем вам коллекции известных брендов Bracli, Sylvie Monthule, Allure Lingerie,
-						    Coquette, LUXXA и Lola Luna. . Безупречное сочетание неординарных дизайнерских решений, современных тенденций моды.</p>
+					    <div class="tabs-content__item"  id="tab2">
+						<div class="comments">
+						    <h3 class="small-title">Отзывы наших покупателей</h3>
+						    <ul class="comments-list">
+							<li class="comments-list__item">
+							    <dl class="comment">
+								<dt class="comment__author">Вася</dt>
+								<dd class="comment__text">ОЧень понравилось!</dd>
+								<dd class="comment__date">21.12.2014</dd>
+							    </dl>
+							</li>
+							<li class="comments-list__item">
+							    <dl class="comment">
+								<dt class="comment__author">Вася</dt>
+								<dd class="comment__text">В нашем каталоге вы найдете элитное нижнее бе
+								    лье от ведущих мировых дизайнеров. В нашем каталоге вы найдете элитное нижнее белье от ведущих мировых дизайнеров.</dd>
+								<dd class="comment__date">21.12.2014</dd>
+							    </dl>
+							</li>
+							<li class="comments-list__item">
+							    <dl class="comment">
+								<dt class="comment__author">Вася</dt>
+								<dd class="comment__text">ОЧень понравилось!</dd>
+								<dd class="comment__date">21.12.2014</dd>
+							    </dl>
+							</li>
+							<li class="comments-list__item">
+							    <dl class="comment">
+								<dt class="comment__author">Вася</dt>
+								<dd class="comment__text">В нашем каталоге вы найдете элитное нижнее бе
+								    лье от ведущих мировых дизайнеров. В нашем каталоге вы найдете элитное нижнее белье от ведущих мировых дизайнеров.</dd>
+								<dd class="comment__date">21.12.2014</dd>
+							    </dl>
+							</li>
+						    </ul>
+						</div>
+						<div class="add-comment">
+							   <h3 class="small-title">Добавить отзыв</h3>
+							   <form class="form form_comment">
+							       <ul class="form-fields">
+								   <li class="form-fields__item">
+								       <label class="field-label field-label_required">
+									   Ваше имя
+								       </label>
+								       <input type="text" class="field field_type_text"/>
+								   </li>
+								   <li class="form-fields__item">
+								       <label class="field-label field-label_required">
+									   Отзыв
+								       </label>
+								       <textarea class="field field_type_textarea"></textarea>
+								   </li>
+							       </ul>
+							       <div class="btnset btnset_right">
+								   <input type="submit" class="btn" value="Отправить"/>
+							       </div>
+							   </form>
+						    </div>
 					    </div>
-					    <div class="description-menu">
-						<a href="#" class="link link_descr-viewer">Подробное описание <i class="ico ico_arrow-left"></i></a>
-						<a href="#" class="link link_comment-viewer"><i class="ico ico_comments"></i> Посмотреть или написать отзыв </a>
+					    <div class="tabs-content__item" id="tab3">
+						тут текст со страницы про оплату и доставку
 					    </div>
-					</div>
-					<div class="tabs__content"  id="tab2">
-
-					</div>
-					<div class="tabs__content"  id="tab3">
-					    тут текст со страницы про оплату и доставку
 					</div>
 				    </div>
 
 				    <div class="reasons">
 					<div class="pure-content">
-					    <h3>5 причин купить этот товар</h3>
+					    <h3 class="small-title">5 причин купить этот товар</h3>
 					    <ol class="reasons-list">
 						<li class="reasons-list__item"><strong>Хочет быть уникальной во всем: </strong>
 						    от выбор парфюма – до нижнего белья. Интернет-магазин нижнего белья Golden String
@@ -294,9 +438,134 @@
 					</div>
 				    </div>
                                 </div>
+
+
+				<section class="section">
+				    <div class="section__header"><h2 class="section__title section__title_special">к этому товару рекомендуем просмотреть</h2></div>
+				    <div class="section__body">
+					<ul class="products-list products-list_4col">
+					    <li class="products-list__item">
+						<div class="product">
+						    <a href="#" class="product__image"><img src="images/content/prod1.png" alt="Открытые стринги Valentine" title="Открытые стринги Valentine" /></a>
+						    <div class="product__label">
+							<a href="#" class="link product__name">Открытые стринги Valentine</a>
+							<span class="product__price">8 990 руб.</span>
+							<a href="#" class="btn">Положить в корзину</a>
+						    </div>
+						</div>
+					    </li>
+					    <li class="products-list__item">
+						<div class="product">
+						    <a href="#" class="product__image"><img src="images/content/prod2.png" alt="Открытые стринги Valentine" title="Открытые стринги Valentine" /></a>
+						    <div class="product__label">
+							<a href="#" class="link product__name">Открытые стринги Valentine</a>
+							<span class="product__price">8 990 руб.</span>
+							<a href="#" class="btn">Положить в корзину</a>
+						    </div>
+						</div>
+					    </li>
+					    <li class="products-list__item">
+						<div class="product">
+						    <a href="#" class="product__image"><img src="images/content/prod3.png" alt="Открытые стринги Valentine" title="Открытые стринги Valentine" /></a>
+						    <div class="product__label">
+							<a href="#" class="link product__name">Открытые стринги Valentine</a>
+							<span class="product__price">8 990 руб.</span>
+							<a href="#" class="btn">Положить в корзину</a>
+						    </div>
+						</div>
+					    </li>
+					    <li class="products-list__item">
+						<div class="product">
+						    <a href="#" class="product__image"><img src="images/content/prod3.png" alt="Открытые стринги Valentine" title="Открытые стринги Valentine" /></a>
+						    <div class="product__label">
+							<a href="#" class="link product__name">Открытые стринги Valentine</a>
+							<span class="product__price">8 990 руб.</span>
+							<a href="#" class="btn">Положить в корзину</a>
+						    </div>
+						</div>
+					    </li>
+					</ul>
+				    </div>
+				</section>
+
+
                             </div>
                         </section>
 
+			<section class="section section_product-carousel">
+			    <div class="section__header"><h2 class="section__title section__title_special">недавно посмотренные товары</h2></div>
+			    <div class="section__body product-gallery-box">
+				<ul class="products-list products-list_4col">
+				    <li class="products-list__item">
+					<div class="product">
+					    <a href="#" class="product__image"><img src="images/content/prod1.png" alt="Открытые стринги Valentine" title="Открытые стринги Valentine" /></a>
+					    <div class="product__label">
+						<a href="#" class="link product__name">Открытые стринги Valentine</a>
+						<span class="product__price">8 990 руб.</span>
+					    </div>
+					</div>
+				    </li>
+				    <li class="products-list__item">
+					<div class="product">
+					    <a href="#" class="product__image"><img src="images/content/prod2.png" alt="Открытые стринги Valentine" title="Открытые стринги Valentine" /></a>
+					    <div class="product__label">
+						<a href="#" class="link product__name">Открытые стринги Valentine</a>
+						<span class="product__price">8 990 руб.</span>
+					    </div>
+					</div>
+				    </li>
+				    <li class="products-list__item">
+					<div class="product">
+					    <a href="#" class="product__image"><img src="images/content/prod3.png" alt="Открытые стринги Valentine" title="Открытые стринги Valentine" /></a>
+					    <div class="product__label">
+						<a href="#" class="link product__name">Открытые стринги Valentine</a>
+						<span class="product__price">8 990 руб.</span>
+					    </div>
+					</div>
+				    </li>
+				    <li class="products-list__item">
+					<div class="product">
+					    <a href="#" class="product__image"><img src="images/content/prod3.png" alt="Открытые стринги Valentine" title="Открытые стринги Valentine" /></a>
+					    <div class="product__label">
+						<a href="#" class="link product__name">Открытые стринги Valentine</a>
+						<span class="product__price">8 990 руб.</span>
+					    </div>
+					</div>
+				    </li>
+				    <li class="products-list__item">
+					<div class="product">
+					    <a href="#" class="product__image"><img src="images/content/prod2.png" alt="Открытые стринги Valentine" title="Открытые стринги Valentine" /></a>
+					    <div class="product__label">
+						<a href="#" class="link product__name">Открытые стринги Valentine</a>
+						<span class="product__price">8 990 руб.</span>
+					    </div>
+					</div>
+				    </li>
+				    <li class="products-list__item">
+					<div class="product">
+					    <a href="#" class="product__image"><img src="images/content/prod3.png" alt="Открытые стринги Valentine" title="Открытые стринги Valentine" /></a>
+					    <div class="product__label">
+						<a href="#" class="link product__name">Открытые стринги Valentine</a>
+						<span class="product__price">8 990 руб.</span>
+					    </div>
+					</div>
+				    </li>
+				    <li class="products-list__item">
+					<div class="product">
+					    <a href="#" class="product__image"><img src="images/content/prod3.png" alt="Открытые стринги Valentine" title="Открытые стринги Valentine" /></a>
+					    <div class="product__label">
+						<a href="#" class="link product__name">Открытые стринги Valentine</a>
+						<span class="product__price">8 990 руб.</span>
+					    </div>
+					</div>
+				    </li>
+				</ul>
+			    </div>
+			    <div class="carousel-nav">
+				<a href="#" class="jcarousel-prev" title="Назад"></a>
+				<a href="#" class="jcarousel-next" title="Вперед"></a>
+			    </div>
+			</section>
 		    </div> <!-- /.page-content -->
 		</div>
 
