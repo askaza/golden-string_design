@@ -104,6 +104,12 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
   -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opperc})";
   filter: ~"alpha(opacity=@{opperc})";
 }
+
+.box-shadow (@string) {
+	-webkit-box-shadow: @string;
+	-moz-box-shadow:    @string;
+	box-shadow:         @string;
+}
 /* constants > */
 
 

@@ -1,0 +1,383 @@
+<!doctype html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>Golden String</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+
+    <meta name="viewport" content="width=device-width" />
+
+
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <script src="js/jquery-1.10.0.min.js"></script>
+    <script src="js/gradienttext.js"></script>
+    <script src="js/jquery.slides.min.js"></script>
+    <script src="js/jquery.formstyler.min.js"></script>
+
+
+    <script>
+	$(function() {
+
+	    $('.breadcrumbs').gradientText({
+		colors: ['#3b2f1f', '#9f8b55'],
+		toProcess: ['li']
+	    });
+
+	    $('.section__title').gradientText({
+                colors: ['#4e493b','#b4923b']
+            });
+
+	});
+    </script>
+
+    <!--[if lte IE 8 ]>
+        <link rel="stylesheet" media="screen" href="css/styles_ie.css" />
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <div class="wrapper">
+
+	<section class="section top"> <!-- top -->
+	    <div class="section__in">
+		<ul class="menu menu_top">
+		    <li class="menu__item">
+			<a href="#" class="menu__link link link_icon" title="На главную"><i class="ico ico_home"></i></a>
+		    </li>
+		    <li class="menu__item">
+			<a href="#" class="menu__link link link_icon"><i class="ico ico_mail"></i> Написать письмо</a>
+		    </li>
+		    <li class="menu__item">
+			<a href="#" class="menu__link link link_icon"><i class="ico ico_faq"></i> Вопросы-ответы</a>
+		    </li>
+		</ul>
+
+		<section class="auth">
+		    <a href="#" class="auth__action link">Войти</a>
+		    <a href="#" class="auth__action link">Регистрация</a>
+		</section>
+
+	    </div>
+	</section> <!-- /top -->
+
+
+	<header class="section header"> <!-- header -->
+	    <div class="section__in">
+		<div class="header__main">
+		    <div class="logo">
+			<a href="#" class="logo__link">
+			    <img class="logo__image" src="images/bg/logo.png" alt="Golden String" title="Golden String" width="316" height="81"/>
+			</a>
+		    </div>
+
+		    <p class="shedule">
+			Интернет-магазин <br />
+			<span class="tel">8 (499) 343-83-48</span>  <span class="tel">8 (925) 898-45-55</span> <br />
+			<span class="work-time">Пн-пт с 10:00 до 22:00</span>
+		    </p>
+
+		    <ul class="list list_marked guaranties">
+			<li class="list__item">Гарантия качества продукции</li>
+			<li class="list__item">Доставка по России и СНГ</li>
+			<li class="list__item">Полная Конфиденциальность</li>
+		    </ul>
+
+		    <div class="shopping-cart">
+			<i class="ico ico_shopping-cart"></i>
+			<a href="#" class="shopping-cart_products">Товаров <span class="shopping-cart_products-count">433</span></a>
+		    </div>
+		</div>
+
+		<nav class="main-nav">
+		    <ul class="menu menu_main">
+			<li class="menu__item">
+			    <a class="menu__link" href="#">О магазине</a>
+			</li>
+			<li class="menu__item">
+			    <a class="menu__link" href="#">Акции и спецпредложения</a>
+			</li>
+			<li class="menu__item">
+			    <a class="menu__link" href="#">Программа лояльности </a>
+			</li>
+			<li class="menu__item">
+			    <a class="menu__link" href="#">В Подарок   </a>
+			</li>
+			<li class="menu__item">
+			    <a class="menu__link" href="#">ОПЛАТА И ДОСТАВКА </a>
+			</li>
+			<li class="menu__item">
+			    <a class="menu__link" href="#">Вопросы - ответы</a>
+			</li>
+			<li class="menu__item">
+			    <a class="menu__link" href="#">Как сделать заказ</a>
+			</li>
+		    </ul>
+		</nav>
+	    </div>
+	</header>   <!-- / .header -->
+
+	<div class="section main"> <!-- .main -->
+	    <div class="section__in">
+
+		<ul class="breadcrumbs">
+		    <li class="breadcrumbs__item"><a href="#" class="link">Главная</a> </li>
+		    <li class="breadcrumbs__item"><a href="#" class="link">Товары</a> </li>
+		</ul>
+
+
+		<div class="columns-layout columns-layout_two">
+		    <div class="sidebar"> <!-- .sidebar -->
+			<section class="section">
+			    <div class="section__header"><h2 class="section__title">Каталог</h2></div>
+			    <div class="section__body">
+				<ul class="menu menu_catalog">
+				    <li class="menu__item menu__item_current">
+					<a class="menu__link" href="#">Интимные украшения</a>
+					<ul class="menu menu_sub">
+					    <li class="menu__item">
+						<a class="menu__link" href="#">Золотые стринги</a>
+					    </li>
+					    <li class="menu__item">
+						<a class="menu__link" href="#">Интимные клипсы</a>
+					    </li>
+					</ul>
+				    </li>
+				    <li class="menu__item">
+					<a class="menu__link" href="#">Стринги</a>
+					<ul class="menu menu_sub">
+					    <li class="menu__item">
+						<a class="menu__link" href="#">Мини-стринги</a>
+					    </li>
+					    <li class="menu__item">
+						<a class="menu__link" href="#">Открытые стринги</a>
+					    </li>
+					</ul>
+				    </li>
+				    <li class="menu__item">
+					<a class="menu__link" href="#">Сорочки</a>
+					<ul class="menu menu_sub">
+					    <li class="menu__item">
+						<a class="menu__link" href="#">Ночные сорочки</a>
+					    </li>
+					    <li class="menu__item">
+						<a class="menu__link" href="#">Бэбидоллы</a>
+					    </li>
+					</ul>
+				    </li>
+
+				</ul>
+			    </div>
+
+			</section>
+			<section class="section">
+
+			    <div class="section__header"><h2 class="section__title">Бренды</h2></div>
+			    <div class="section__body">
+				<ul class="menu menu_brands">
+				    <li class="menu__item">
+					<a class="menu__link" href="#">Luxxa</a>
+				    </li>
+				    <li class="menu__item">
+					<a class="menu__link" href="#">Lola Luna</a>
+				    </li>
+				    <li class="menu__item">
+					<a class="menu__link" href="#">Sylvie Monthule</a>
+				    </li>
+				    <li class="menu__item">
+					<a class="menu__link" href="#">Bracli</a>
+				    </li>
+				    <li class="menu__item">
+					<a class="menu__link" href="#">Coquette</a>
+				    </li>
+				    <li class="menu__item">
+					<a class="menu__link" href="#">Allure Lingerie</a>
+				    </li>
+				    <li class="menu__item">
+					<a class="menu__link" href="#">LivCo Corsetti</a>
+				    </li>
+				    <li class="menu__item">
+					<a class="menu__link" href="#">Casmir</a>
+				    </li>
+				</ul>
+			    </div>
+			</section>
+			<section class="section">
+
+			    <div class="section__header"><h2 class="section__title">Просмотренные</h2></div>
+			    <div class="section__body">
+				<ul class="products-list">
+				    <li class="products-list__item">
+					<div class="product">
+					    <a href="#" class="product__image"><img src="images/content/prod1.png" alt="Открытые стринги Valentine" title="Открытые стринги Valentine" /></a>
+					    <div class="product__label">
+						<a href="#" class="link product__name">Открытые стринги Valentine</a>
+						<span class="product__price">8 990 руб.</span>
+					    </div>
+					</div>
+				    </li>
+				    <li class="products-list__item">
+					<div class="product">
+					    <a href="#" class="product__image"><img src="images/content/prod2.png" alt="Открытые стринги Valentine" title="Открытые стринги Valentine" /></a>
+					    <div class="product__label">
+						<a href="#" class="link product__name">Открытые стринги Valentine</a>
+						<span class="product__price">8 990 руб.</span>
+					    </div>
+					</div>
+				    </li>
+				    <li class="products-list__item">
+					<div class="product">
+					    <a href="#" class="product__image"><img src="images/content/prod3.png" alt="Открытые стринги Valentine" title="Открытые стринги Valentine" /></a>
+					    <div class="product__label">
+						<a href="#" class="link product__name">Открытые стринги Valentine</a>
+						<span class="product__price">8 990 руб.</span>
+					    </div>
+					</div>
+				    </li>
+				</ul>
+			    </div>
+			</section>
+		    </div> <!-- /.sidebar -->
+		    <div class="page-content"> <!-- .page-content -->
+			<section class="section">
+			    <div class="section__header"><h2 class="section__title">Брэнды</h2></div>
+			    <section class="section section_type_border preview"> <!-- .preview -->
+				<div class="preview__thumbnail thumbnail">
+				     <a href="#" class="thumbnail__image-wrap">
+					<img class="thumbnail__image" src="images/content/rose.png" alt="Rosebuds" title="Rosebuds" />
+				    </a>
+				</div>
+				<div class="preview__content">
+				    <div class="pure-content">
+					<h1 class="section-head-title">Rosebuds</h1><p class="em center">Чтобы достичь настоящего удовольствия, иногда нужно выйти за границы привычного.</p>
+					<p>Название это бренда переводится как «бутон розы». Вот и впрямь сложно найти лучшую ассоциацию для всей линейки этих завораживающих, потрясающе красивых анальных украшений!</p>
+					<p class="em center">Создатель Rosebuds Джулиан Снеллинге разработал первое украшение еще в 1996 году.</p>
+					<p>Сегодня на рынке можно встретить огромное количество копий Rosebuds, но, как это обычно и бывает, подделки лишь отдаленно похожи на оригиналы. Сравнивая оригинальное украшение Rosebuds и его копию, особенно остро понимаешь разницу между истинным творением и посредственностью. </p>
+					<p class="bold center">В чем особенности Rosebuds?</p>
+					<p>Они могут быть использованы для усиления ощущений во время сексуальных игр. Кстати, эти украшения можно носить и в течение дня, ведь они совершенно не заметны под одеждой. Если захотите чего-то особенного, то попробуйте использовать Rosebuds во время бега или езды на велосипеде &ndash; гарантируем незабываемые впечатления!</p>
+					<p>При регулярном ношении Rosebuds вы сможете стимулировать мышцы ануса и половых органов, научитесь полностью их контролировать. </p>
+					<p>Для мужчин Rosebuds &ndash; это не просто дополнительный источник удовольствия во время полового акта, но и способ стимулировать простату. Кстати, за счет вовлечения в процесс предстательной железы оргазм становится более ярким, а эякуляция &ndash; обильной. </p>
+					<p>Для женщин Rosebuds &ndash; это путь в мир особых удовольствий и новых впечатлений. Например, с Rosebuds можно попробовать двойное проникновение. Кстати, существует возможность выбирать размеры этих игрушек &ndash; от совсем небольших до действительно внушительных. </p>
+					<p class="em center">Каждый Rosebuds уникален в своем роде. При создании используются люкс материалы и кристаллы Сваровски. Эти анальные украшения не темнеют и не выцветают, они будут радовать вас не только своими возможностями, но и внешним видом.</p>
+					<p class="em center">На сегодняшний день купить Rosebuds в России можно только в нашем магазине.</p>
+				    </div>
+				    <a class="link link_view-catalog" href="http://www.golden-string.ru/brands/561/">все товары этого бренда</a>
+				</div>
+			    </section> <!-- /.preview -->
+			     <section class="section section_type_border preview"> <!-- .preview -->
+				<div class="preview__thumbnail thumbnail">
+				    <a href="#" class="thumbnail__image-wrap">
+					<img class="thumbnail__image" src="images/content/allure.png" alt="Rosebuds" title="Rosebuds" />
+				    </a>
+				</div>
+				<div class="preview__content">
+				    <div class="pure-content">
+					<h1 class="section-head-title">Allure</h1>
+					<p>
+					    Этот канадский производитель нижнего женского и мужского белья, садо-мазо атрибутики, одежды из винила и кожи известен с 1993 года. Товары Allure Lingerie получили широкую популярность в Европе и в странах Северной Америки.<br>
+					    <br>
+					    Компания заслужила свои лидерские позиции благодаря безупречному качеству своей продукции, невероятной ее сексуальности и доступным ценам. Дизайнеры компании каждый сезон не устают создавать новые коллекции, разнообразные не только по своим цветам и материалам, но и по своим решениям.<br>
+					    <br>
+					    В производстве товаров Allure Lingerie применяет сырье только самого высочайшего качества, и благодаря этому белье, одежда, аксессуары для сексуальных игр стали так востребованы среди розничных и оптовых покупателей.<br>
+					    <br>
+					    Новшеством в производстве эротического белья стало использование Rubber Look Vinyl - материала, не имеющего глянцевого блеска, нежного и теплого на ощупь.<br>
+					    <br>
+					    Ультрамодные, гламурные, брутальные модели изготовлены из кожи, винила, текстиля с присутствием металлической фурнитуры.
+					</p>
+				    </div>
+				    <a class="link link_view-catalog" href="http://www.golden-string.ru/brands/561/">все товары этого бренда</a>
+				</div>
+			    </section> <!-- /.preview -->
+			    <section class="section section_type_border preview"> <!-- .preview -->
+				<div class="preview__thumbnail thumbnail">
+				     <a href="#" class="thumbnail__image-wrap">
+					<img class="thumbnail__image" src="images/content/casmir.jpg" alt="Rosebuds" title="Rosebuds" />
+				    </a>
+				</div>
+				<div class="preview__content">
+				    <div class="pure-content">
+					<h1 class="section-head-title">Casmir</h1>
+				    </div>
+				    <a class="link link_view-catalog" href="http://www.golden-string.ru/brands/561/">все товары этого бренда</a>
+				</div>
+			    </section> <!-- /.preview -->
+			</section>
+
+
+		    </div> <!-- /.page-content -->
+		</div>
+
+	    </div>
+	</div> <!-- /.main -->
+
+	<section class="section partners"> <!-- .partners -->
+	    <div class="section__in">
+		<div class="partners-line">
+		    <span class="partners-line__text">Доставка по России и СНГ:</span>
+		    <ul class="logos-list">
+			<li class="logos-list__item"><img src="images/content/ems.png" alt="еms" title="еms"/></li>
+			<li class="logos-list__item"><img src="images/content/dhl.png" alt="еms" title="еms"/></li>
+			<li class="logos-list__item"><img src="images/content/pony.png" alt="еms" title="еms"/></li>
+		    </ul>
+		</div>
+		<div class="partners-line">
+		    <span class="partners-line__text">Оплата любыми удобными для Вас способами:</span>
+		    <ul class="logos-list">
+			<li class="logos-list__item"><img src="images/content/elex.png" alt="еms" title="еms"/></li>
+			<li class="logos-list__item"><img src="images/content/wm.png" alt="еms" title="еms"/></li>
+			<li class="logos-list__item"><img src="images/content/alfa.png" alt="еms" title="еms"/></li>
+			<li class="logos-list__item"><img src="images/content/qiwi.png" alt="еms" title="еms"/></li>
+			<li class="logos-list__item"><img src="images/content/mc.png" alt="еms" title="еms"/></li>
+			<li class="logos-list__item"><img src="images/content/vtb.png" alt="еms" title="еms"/></li>
+			<li class="logos-list__item"><img src="images/content/yd.png" alt="еms" title="еms"/></li>
+			<li class="logos-list__item"><img src="images/content/visa.png" alt="еms" title="еms"/></li>
+		    </ul>
+		</div>
+		<h6 class="guaranties">Полная конфиденциальность</h6>
+	    </div>
+	</section> <!-- /.partners -->
+
+	<footer class="section footer"> <!-- .footer -->
+	    <div class="section__in">
+		<div class="contacts">
+		    <dl class="contact">
+			<dt class="contact__title">Адрес:</dt>
+			<dd class="contact__value">г. Москва, ул. Люсиновская, д. 36</dd>
+		    </dl>
+		    <dl class="contact">
+			<dt class="contact__title">Телефон:</dt>
+			<dd class="contact__value">8 (499) 343-83-48, 8 (925) 898-45-55</dd>
+		    </dl>
+		    <dl class="contact">
+			<dt class="contact__title">E-mail:</dt>
+			<dd class="contact__value"><a href="mailto:admin@golden-string.ru" class="link">admin@golden-string.ru</a></dd>
+		    </dl>
+		</div>
+		<ul class="menu menu_footer">
+		    <li class="menu__item"><a href="#" class="menu__link">О магазине</a></li>
+		    <li class="menu__item"><a href="#" class="menu__link">Как купить</a></li>
+		    <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+		    <li class="menu__item"><a href="#" class="menu__link">Размеры</a></li>
+		    <li class="menu__item"><a href="#" class="menu__link">Бренды</a></li>
+		</ul>
+		<p class="copy">
+		    <span class="copy__text">&copy; Golden String   2012 - 2013</span>
+		    <a href="#" class="link link_icon"><i class="ico ico_fb"></i></a>
+		    <a href="#" class="link link_icon"><i class="ico ico_tw"></i></a>
+		</p>
+	    </div>
+	</footer>  <!-- /.footer -->
+
+    </div>
+
+</body>
+</html>
