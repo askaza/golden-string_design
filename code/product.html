@@ -57,6 +57,8 @@
 		target: '+=1'
 	    });
 
+
+
 	    //initiate the plugin and pass the id of the div containing gallery images
 //	$("#zoom_product").elevateZoom({
 //	    gallery:'gallery',
@@ -277,12 +279,35 @@
 						</ul>
 						<a href="#" class="link link_action">Как определить размер?</a>
 					    </div>
+					    <div class="product__color">
+						<span class="filter__label">Цвет:</span>
+						<ul class="filter-list filter-list_colors">
+						    <li class="filter-list__item ">
+							<a href="javascript: void(0);" class="link">
+							    <img class="cloth-image" src="images/content/sample1_small.jpg"/>
+							    <img class="cloth-image-large" src="images/content/sample1_large.jpg"/>
+							</a>
+							<span class="cloth-title">Зеленый</span>
+
+						    </li>
+						    <li class="filter-list__item filter-list__item_current">
+							<a href="javascript: void(0);" class="link">
+							    <img class="cloth-image" src="images/content/sample2_small.jpg"/>
+							    <img class="cloth-image-large" src="images/content/sample2_large.jpg"/>
+							</a>
+							<span class="cloth-title">Белый</span>
+
+						    </li>
+						</ul>
+
+					    </div>
 					    <div class="product__delivery">
-						<span class="product-available"> <i class="ico ico_check"></i> Товар доступен!</span>
+						<span class="product-available"> <span class="product-available"> <i class="ico ico_check"></i> Товар доступен!</span> Товар доступен!</span>
 						<a href="#" class="product-delivery-time"> <i class="ico ico_time"></i> Сроки доставки</a>
 					    </div>
 					    <div class="product__delivery">
-						<i class="ico ico_time"></i> Товар будет на складе через <strong>10 дней</strong>
+						<span class="product-not-available"><i class="ico ico_time"></i> Товар будет на складе через <strong>10 дней</strong> </span>
+						<a href="#" class="link link_action">Сообщить о поступлении</a>
 					    </div>
 					    <div class="product__buy">
 						<input type="button" class="btn" value="Положить в корзину" />
