@@ -283,49 +283,34 @@ input[type="button"] {
 }
 /* custom select > */
 
-.jq-radio.field_type_radio {
-    border:1px solid #cecece;
-    height:11px;
-    left:0;
-    top:0;
-    position:absolute;
-    width:11px;
-    .rounded(6px);
-}
-.jq-radio.field_type_radio.checked div {
-    background:#37bc6c;
-    height:5px;
-    margin:3px 0 0 3px;
-    width:5px;
-    .rounded(3px);
+
+/* information-message < */
+
+.information-message {
+    display: block;
+    padding:10px 0 0 0;
+    width:480px;
+
+    .ico {
+	background-position: 50% 50%;
+	height: 25px;
+	width: 25px;
+	float:left;
+	margin-right: 10px;
+    }
+    .information-message__text  {
+	display: block;
+	overflow: hidden;
+	padding-top:4px;
+	color:#6b675f;
+	font-family: @font-family-opensans-light-it;
+	font-size:12px;
+	padding-top:5px;
+    }
 }
 
-.jq-file.field_type_file {
-    position:relative;
-    height:27px;
-    width:348px;
-    margin-right:8px;
-}
-.jq-file__browse {
-    background: none repeat scroll 0 0 #FFFFFF;
-    border: 1px solid #CECECE;
-    .rounded;
-    height: 15px;
-    line-height: 14px;
-    padding: 5px 10px;
-    width:326px;
-    z-index:10;
-}
-.jq-file__name {
-    background: none repeat scroll 0 0 #FFFFFF;
-    left: 10px;
-    position: absolute;
-    top: 6px;
-    .ellipsis;
-    width:360px;
-    width: 90%;
-    z-index: 20;
-}
+
+/* information-message > */
 
 
 .form_comment {
@@ -340,3 +325,5 @@ input[type="button"] {
 	width:793px;
     }
 }
+
+
