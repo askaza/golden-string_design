@@ -191,7 +191,7 @@ input[type="button"] {
 }
 
     .btnset_right {
-	margin-left: 0 !important;
+	width: 694px;
 	text-align: right;
     }
 
@@ -205,8 +205,23 @@ input[type="button"] {
 /* form standard < */
 
 .form_standard {
+    .form-fields__item {
+	margin-bottom: 30px;
+    }
+    .field-label {
+	text-align: right;
+	line-height: 31px;
+	width: 260px;
+    }
 
+    .field_type_text {
+	background-color: #211d16;
+	width: 385px;
+    }
 
+    .information-message {
+	margin-left: 265px;
+    }
 
 }
 
@@ -288,13 +303,10 @@ input[type="button"] {
 
 .information-message {
     display: block;
-    padding:10px 0 0 0;
-    width:480px;
+    padding:16px 0 0 0;
+    width:385px;
 
     .ico {
-	background-position: 50% 50%;
-	height: 25px;
-	width: 25px;
 	float:left;
 	margin-right: 10px;
     }
@@ -304,13 +316,41 @@ input[type="button"] {
 	padding-top:4px;
 	color:#6b675f;
 	font-family: @font-family-opensans-light-it;
-	font-size:12px;
+	font-size:14px;
+	line-height: 22px;
 	padding-top:5px;
     }
 }
 
 
 /* information-message > */
+
+/* autocompleter < */
+.ui-helper-hidden-accessible {
+    display: none;
+    height: 0;
+}
+.ui-autocomplete {
+    position: absolute;
+    border: 1px solid #262119;
+    color: #77736B;
+    font-size: 14px;
+    background-color: #211D16;
+    width:385px;
+    z-index:100;
+
+    li {
+	padding: 3px 8px;
+	cursor: pointer;
+    }
+
+    a {
+	color: #77736B;
+    }
+    .ui-state-focus {
+	color:#A18C56;
+    }
+}
 
 
 .form_comment {
@@ -325,5 +365,6 @@ input[type="button"] {
 	width:793px;
     }
 }
+
 
 
