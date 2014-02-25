@@ -13,6 +13,7 @@ select {
 }
 .field-box {
     position:relative;
+    overflow: hidden;
 }
 
 textarea {
@@ -92,11 +93,19 @@ textarea {
     line-height: 14px;
     font-size:14px;
 }
-.field-box_radio {
+.field_type_radio {
+    background: url(../images/bg/form.png) no-repeat 0 0;
     position:relative;
-    padding-left:21px;
-    line-height: 14px;
-    font-size:14px;
+    margin-right: 8px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top:4px;
+    height: 15px;
+    width:15px;
+
+    &.checked {
+        background: url(../images/bg/form.png) no-repeat 0 -15px;
+    }
 }
 
 .jq-checkbox {
@@ -191,8 +200,11 @@ input[type="button"] {
 }
 
 .btnset_right {
-    width: 694px;
     text-align: right;
+
+    .btn {
+	margin-left: 10px;
+    }
 }
 
 .btnset_center {
@@ -216,6 +228,8 @@ input[type="button"] {
 /* form standard < */
 
 .form_standard {
+    margin-top:45px;
+
     .form-fields__item {
 	margin-bottom: 30px;
     }
@@ -232,6 +246,10 @@ input[type="button"] {
 
     .information-message {
 	margin-left: 265px;
+    }
+
+    .btnset_right {
+	width: 673px;
     }
 
 }
@@ -363,6 +381,56 @@ input[type="button"] {
     }
 }
 
+/* autocompleter > */
+
+/* errors < */
+
+.field_state_error {
+    border-color:#a83f3f;
+}
+/* errors > */
+
+/* form-lines < */
+
+.form-lines__item {
+    margin-top: 1px;
+
+    .hint {
+	color:#aaa7a3;
+	display: none;
+	font-family: @font-family-opensans-light-it;
+	font-size: 12px;
+	line-height: 18px;
+	margin:5px 0 15px 270px;
+	width:370px;
+    }
+}
+.form-lines__header {
+    background: #221b08;
+    height: 42px;
+    position:relative;
+
+    .delivery-details,
+    .field-label {
+	line-height: 42px;
+    }
+
+    .field_type_radio {
+	margin-top:13px;
+    }
+
+    .link_action {
+	color:@yellow;
+	cursor: pointer;
+    }
+}
+.delivery-details__item {
+    color:#77736b;
+    font-family: @font-family-opensans-semibold;
+    font-weight: normal;
+    margin-right:15px;
+}
+/* form-lines > */
 
 .form_comment {
     .field-label {
@@ -375,6 +443,8 @@ input[type="button"] {
 	float:left;
 	width:793px;
     }
+
+
 }
 
 

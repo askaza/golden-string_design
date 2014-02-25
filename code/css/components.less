@@ -1514,6 +1514,7 @@ body {
 .description-menu {
     position:relative;
     font-size:14px;
+    height:25px;
 
     .link_descr-viewer {
 	color:@yellow;
@@ -1705,3 +1706,48 @@ body {
 }
 
 /* choose register >  */
+
+/* order-steps < */
+
+.order-steps {
+    overflow:hidden;
+    margin:25px 0 0 -15px;
+}
+.order-steps__item {
+    float:left;
+    margin-left:15px;
+}
+.order-steps__text {
+    background:url(../images/bg/order-steps.png) no-repeat 0 0;
+    display:block;
+    height:37px;
+    line-height:36px;
+    font-size:14px;
+    color:@yellow;
+    position:relative;
+    padding:0 8px 0 28px;
+
+    &:after {
+	content:"";
+	background:url(../images/bg/order-steps.png) no-repeat 100% 0;
+	display:block;
+	height:37px;
+	position:absolute;
+	top:0;
+	right:-20px;
+	width:20px;
+    }
+}
+
+.order-steps__item_current {
+    .order-steps__text {
+	background:url(../images/bg/order-steps.png) no-repeat 0 -38px;
+	color:#fff;
+
+	&:after {
+	    background:url(../images/bg/order-steps.png) no-repeat 100% -38px;
+	}
+    }
+}
+
+/* order-steps > */
