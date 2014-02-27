@@ -20,12 +20,13 @@
 */
 #cboxOverlay{opacity: 0 !important;}
 #colorbox{
+	background:##211D16;
     overflow:visible;
     webkit-box-shadow:0 0 27px 13px rgba(0,0,0,0.75);
     -moz-box-shadow:  0 0 27px 13px rgba(0,0,0,0.75);
     box-shadow:    0 0 27px 13px rgba(0,0,0,0.75);
 }
-    #cboxContent{margin-top:32px; overflow:visible;}
+    #cboxContent{ overflow:visible;}
         .cboxIframe{background:#000000;}
         #cboxError{padding:50px; border:1px solid #ccc;}
         #cboxLoadedContent{background:#211d16; padding:20px;}
