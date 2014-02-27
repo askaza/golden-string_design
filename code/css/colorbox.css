@@ -20,7 +20,7 @@
 */
 #cboxOverlay{opacity: 0 !important;}
 #colorbox{
-	background:##211D16;
+	background:#211D16;
     overflow:visible;
     webkit-box-shadow:0 0 27px 13px rgba(0,0,0,0.75);
     -moz-box-shadow:  0 0 27px 13px rgba(0,0,0,0.75);

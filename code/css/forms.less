@@ -438,36 +438,30 @@ input[type="button"] {
 
 .pack-type {
     position:relative;
-    padding:0 35px;
+    padding:0 25px 35px;
 
     .field-label {
 	float:none;
 	display:block;
+	color:#4e493b;
+	font-size:16px;
+	line-height:20px;
     }
     .thumbnail {
 	border-color:#383225;
 	display:block;
 	margin:0 auto 8px;
-	height:110px;
-	width:110px;
 
-	.thumbnail__image-wrap {
-	    height:110px;
-	    width:110px;
-	}
-
-	.thumbnail__image {
-	    max-height:105px;
-	    max-width:105px;
-	}
     }
 
     .pack-type__name {
 	display:block;
     }
     .pack-type__price {
+	font-size:20px;
+	font-family:@font-family-opensans-semibold;
 	position:absolute;
-	bottom:-40px;
+	bottom:-48px;
 	left:0;
 	width:100%;
 	text-align:center;
@@ -475,12 +469,21 @@ input[type="button"] {
 }
 .pack-variants {
     overflow:hidden;
-    margin:0 -20px;
+    margin:30px 0 15px;
+    padding-bottom:32px;
+    border-bottom:1px solid #292419;
 
     .pack-variants__item {
 	float:left;
 	text-align:center;
-	width:244px;
+	width:243px;
+
+	&:last-child {
+	    margin-right:-30px;
+	}
+	&:first-child {
+	    margin-left:-10px;
+	}
     }
 }
 
@@ -497,9 +500,12 @@ input[type="button"] {
 	float:left;
 	width:793px;
     }
-
-
 }
 
+.form_pack {
+    .btnset {
+	margin: 20px 0 30px;
+    }
+}
 
 
