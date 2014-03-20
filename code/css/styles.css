@@ -195,6 +195,9 @@ h3.small-title {
   line-height: 22px;
   margin-bottom: 12px;
 }
+h3.small-title strong {
+  font-family: 'open_sanssemibold', Tahoma, sans-serif;
+}
 div + h3.small-title {
   margin-top: 20px;
 }
@@ -273,7 +276,7 @@ p + h3 {
   line-height: 20px;
 }
 .pure-content p + p {
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 table {
   margin-bottom: 15px;
@@ -2425,7 +2428,7 @@ body {
 .table_order .link_action + .link_action {
   margin-left: 15px;
 }
-.section__body > .form > .table_order {
+.section__body > .form > .table_order:first-child {
   margin-top: -16px;
 }
 .order-check {
