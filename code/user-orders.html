@@ -1,0 +1,258 @@
+<!doctype html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>Golden String</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+
+    <meta name="viewport" content="width=device-width" />
+
+
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <script src="js/jquery-1.10.0.min.js"></script>
+    <script src="js/gradienttext.js"></script>
+    <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="js/jquery.slides.min.js"></script>
+    <script src="js/jquery.formstyler.min.js"></script>
+
+
+    <script>
+	$(function() {
+
+
+
+	    $('.section__title').gradientText({
+		colors: ['#4e493b', '#b4923b']
+	    });
+
+	});
+    </script>
+
+    <!--[if lte IE 8 ]>
+        <link rel="stylesheet" media="screen" href="css/styles_ie.css" />
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <div class="wrapper">
+
+	<section class="section top"> <!-- top -->
+	    <div class="section__in">
+		<ul class="menu menu_top">
+		    <li class="menu__item">
+			<a href="#" class="menu__link link link_icon" title="На главную"><i class="ico ico_home"></i></a>
+		    </li>
+		    <li class="menu__item">
+			<a href="#" class="menu__link link link_icon"><i class="ico ico_mail"></i> Написать письмо</a>
+		    </li>
+		    <li class="menu__item">
+			<a href="#" class="menu__link link link_icon"><i class="ico ico_faq"></i> Вопросы-ответы</a>
+		    </li>
+		</ul>
+
+		<section class="auth">
+		    <a href="#" class="auth__action link">Войти</a>
+		    <a href="#" class="auth__action link">Регистрация</a>
+		</section>
+
+	    </div>
+	</section> <!-- /top -->
+
+
+	<header class="section header"> <!-- header -->
+	    <div class="section__in">
+		<div class="header__main">
+		    <div class="logo">
+			<a href="#" class="logo__link">
+			    <img class="logo__image" src="images/bg/logo.png" alt="Golden String" title="Golden String" width="316" height="81"/>
+			</a>
+		    </div>
+
+		    <p class="shedule">
+			Интернет-магазин <br />
+			<span class="tel">8 (499) 343-83-48</span>  <span class="tel">8 (925) 898-45-55</span> <br />
+			<span class="work-time">Пн-пт с 10:00 до 22:00</span>
+		    </p>
+
+		    <ul class="list list_marked guaranties">
+			<li class="list__item">Гарантия качества продукции</li>
+			<li class="list__item">Доставка по России и СНГ</li>
+			<li class="list__item">Полная Конфиденциальность</li>
+		    </ul>
+
+		    <div class="shopping-cart">
+			<i class="ico ico_shopping-cart"></i>
+			<a href="#" class="shopping-cart_products">Товаров <span class="shopping-cart_products-count">433</span></a>
+		    </div>
+		</div>
+
+		<nav class="main-nav">
+		    <ul class="menu menu_main">
+			<li class="menu__item">
+			    <a class="menu__link" href="#">О магазине</a>
+			</li>
+			<li class="menu__item">
+			    <a class="menu__link" href="#">Акции и спецпредложения</a>
+			</li>
+			<li class="menu__item">
+			    <a class="menu__link" href="#">Программа лояльности </a>
+			</li>
+			<li class="menu__item">
+			    <a class="menu__link" href="#">В Подарок   </a>
+			</li>
+			<li class="menu__item">
+			    <a class="menu__link" href="#">ОПЛАТА И ДОСТАВКА </a>
+			</li>
+			<li class="menu__item">
+			    <a class="menu__link" href="#">Вопросы - ответы</a>
+			</li>
+			<li class="menu__item">
+			    <a class="menu__link" href="#">Как сделать заказ</a>
+			</li>
+		    </ul>
+		</nav>
+	    </div>
+	</header>   <!-- / .header -->
+
+	<div class="section main"> <!-- .main -->
+	    <div class="section__in">
+
+		<ul class="breadcrumbs">
+		    <li class="breadcrumbs__item"><a href="#" class="link">Главная</a> </li>
+		    <li class="breadcrumbs__item">Корзина</li>
+		</ul>
+		<ul class="user-menu user-menu_type_main">
+		    <li class="user-menu__item"><a href="#" class="link">Мои настройки</a></li>
+		    <li class="user-menu__item user-menu__item_current"><a href="#" class="link">Мои заказы</a></li>
+		    <li class="user-menu__item"><a href="#" class="link">Корзина</a></li>
+		</ul>
+
+		<div class="columns-layout columns-layout_wide">
+		    <div class="page-content"> <!-- .page-content -->
+                        <section  class="section section_type_border section_forms">
+                            <div class="section__header">
+				 <h2 class="section__title">Мои настройки</h2>
+                            </div>
+                            <div class="section__body">
+				<div class="pure-content">
+				    <p>Чтобы посмотреть состав заказа, щелкните на его номере.</p>
+				    <p>Если Вы обнаружили неточности в этом списке, пожалуйста, напишите в <a href="#" class="link">отдел по работе с клиентами</a>.</p>
+				</div>
+				<form class="form form_standard">
+				    <table class="table table_order">
+					<thead>
+					    <tr>
+						<th>Номер заказа</th>
+						<th>Дата заказа</th>
+						<th>Сумма заказа</th>
+						<th>Статус заказа</th>
+					    </tr>
+					</thead>
+					<tbody>
+					    <tr>
+						<td><a href="#" class="link product__name">23ФВ45645</a></td>
+						<td>12.12.2014</td>
+						<td><strong class="product__summary-price">8 990 руб.</strong></td>
+						<td>Оплачен</td>
+					    </tr>
+					    <tr>
+						<td><a href="#" class="link product__name">23ФВ45645</a></td>
+						<td>12.12.2014</td>
+						<td><strong class="product__summary-price">8 990 руб.</strong></td>
+						<td>Оплачен</td>
+					    </tr>
+					    <tr>
+						<td><a href="#" class="link product__name">23ФВ45645</a></td>
+						<td>12.12.2014</td>
+						<td><strong class="product__summary-price">8 990 руб.</strong></td>
+						<td>Оплачен</td>
+					    </tr>
+					    <tr>
+						<td><a href="#" class="link product__name">23ФВ45645</a></td>
+						<td>12.12.2014</td>
+						<td><strong class="product__summary-price">8 990 руб.</strong></td>
+						<td>Оплачен</td>
+					    </tr>
+					</tbody>
+				    </table>
+				</form>
+			    </div>
+			</section>
+		    </div>
+		</div>
+
+	    </div>
+	</div> <!-- /.main -->
+
+	<section class="section partners"> <!-- .partners -->
+	    <div class="section__in">
+		<div class="partners-line">
+		    <span class="partners-line__text">Доставка по России и СНГ:</span>
+		    <ul class="logos-list">
+			<li class="logos-list__item"><img src="images/content/ems.png" alt="еms" title="еms"/></li>
+			<li class="logos-list__item"><img src="images/content/dhl.png" alt="еms" title="еms"/></li>
+			<li class="logos-list__item"><img src="images/content/pony.png" alt="еms" title="еms"/></li>
+		    </ul>
+		</div>
+		<div class="partners-line">
+		    <span class="partners-line__text">Оплата любыми удобными для Вас способами:</span>
+		    <ul class="logos-list">
+			<li class="logos-list__item"><img src="images/content/elex.png" alt="еms" title="еms"/></li>
+			<li class="logos-list__item"><img src="images/content/wm.png" alt="еms" title="еms"/></li>
+			<li class="logos-list__item"><img src="images/content/alfa.png" alt="еms" title="еms"/></li>
+			<li class="logos-list__item"><img src="images/content/qiwi.png" alt="еms" title="еms"/></li>
+			<li class="logos-list__item"><img src="images/content/mc.png" alt="еms" title="еms"/></li>
+			<li class="logos-list__item"><img src="images/content/vtb.png" alt="еms" title="еms"/></li>
+			<li class="logos-list__item"><img src="images/content/yd.png" alt="еms" title="еms"/></li>
+			<li class="logos-list__item"><img src="images/content/visa.png" alt="еms" title="еms"/></li>
+		    </ul>
+		</div>
+		<h6 class="guaranties">Полная конфиденциальность</h6>
+	    </div>
+	</section> <!-- /.partners -->
+
+	<footer class="section footer"> <!-- .footer -->
+	    <div class="section__in">
+		<div class="contacts">
+		    <dl class="contact">
+			<dt class="contact__title">Адрес:</dt>
+			<dd class="contact__value">г. Москва, ул. Люсиновская, д. 36</dd>
+		    </dl>
+		    <dl class="contact">
+			<dt class="contact__title">Телефон:</dt>
+			<dd class="contact__value">8 (499) 343-83-48, 8 (925) 898-45-55</dd>
+		    </dl>
+		    <dl class="contact">
+			<dt class="contact__title">E-mail:</dt>
+			<dd class="contact__value"><a href="mailto:admin@golden-string.ru" class="link">admin@golden-string.ru</a></dd>
+		    </dl>
+		</div>
+		<ul class="menu menu_footer">
+		    <li class="menu__item"><a href="#" class="menu__link">О магазине</a></li>
+		    <li class="menu__item"><a href="#" class="menu__link">Как купить</a></li>
+		    <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+		    <li class="menu__item"><a href="#" class="menu__link">Размеры</a></li>
+		    <li class="menu__item"><a href="#" class="menu__link">Бренды</a></li>
+		</ul>
+		<p class="copy">
+		    <span class="copy__text">&copy; Golden String   2012 - 2013</span>
+		    <a href="#" class="link link_icon"><i class="ico ico_fb"></i></a>
+		    <a href="#" class="link link_icon"><i class="ico ico_tw"></i></a>
+		</p>
+	    </div>
+	</footer>  <!-- /.footer -->
+
+    </div>
+
+</body>
+</html>
