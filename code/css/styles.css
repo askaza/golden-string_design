@@ -1417,6 +1417,7 @@ body {
   margin: 0 0 20px 17px;
   vertical-align: top;
   width: 220px;
+  position: relative;
 }
 .products-list__item .product__image {
   height: 315px;
@@ -1480,6 +1481,10 @@ body {
 .products-list__item .savings {
   background: #181308;
   padding: 11px 0;
+}
+.products-list__item:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
 }
 .products-list_4col {
   margin-left: -13px;
@@ -2568,3 +2573,23 @@ body {
   cursor: default;
 }
 /* user menu > */
+/* tooltip< */
+.tooltip {
+  background: #211d16;
+  position: absolute;
+  bottom: 30px;
+  left: 140px;
+  visibility: hidden;
+  opacity: 0;
+  padding: 20px;
+  transition: all 0.4s ease;
+  webkit-box-shadow: 0 0 27px 13px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 0 27px 13px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 27px 13px rgba(0, 0, 0, 0.75);
+  z-index: 100;
+  width: 400px;
+}
+.tooltip .btn {
+  margin-top: 20px;
+}
+/* tooltip> */

@@ -558,6 +558,7 @@ body {
             width:100%;
         }
     }
+
 }
 
 .sizes-table {
@@ -632,6 +633,7 @@ body {
     margin:0 0 20px 17px;
     vertical-align: top;
     width:220px;
+    position:relative;
 
     .product__image {
         height: 315px;
@@ -700,6 +702,13 @@ body {
     .savings {
         background: #181308;
         padding: 11px 0;
+    }
+
+    &:hover {
+	.tooltip {
+	    visibility:visible;
+	    opacity:1;
+	}
     }
 }
 
@@ -1987,3 +1996,27 @@ body {
     }
 }
 /* user menu > */
+
+/* tooltip< */
+
+.tooltip {
+    background:#211d16;
+    position:absolute;
+    bottom:30px;
+    left:140px;
+    visibility:hidden;
+    opacity:0;
+    padding:20px;
+    transition:all 0.4s ease;
+    webkit-box-shadow:0 0 27px 13px rgba(0,0,0,0.75);
+    -moz-box-shadow:  0 0 27px 13px rgba(0,0,0,0.75);
+    box-shadow:    0 0 27px 13px rgba(0,0,0,0.75);
+    z-index:100;
+    width:400px;
+
+    .btn {
+	margin-top:20px;
+    }
+}
+
+/* tooltip> */
