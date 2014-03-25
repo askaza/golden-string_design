@@ -23,6 +23,16 @@ body {
         float:right;
         width:700px;
     }
+
+    .column-content {
+	margin-left: 10%;
+	width: 45%;
+	float:left;
+
+	&:first-child {
+	    margin: 0;
+	}
+    }
 }
 
 .sidebar,
@@ -527,6 +537,16 @@ body {
 	    color:#a18c56;
 	    font-size:34px;
 	}
+    }
+}
+
+.section_action {
+    border-top:1px solid #262119;
+    padding-top:30px;
+    margin-top:10px;
+
+    .section_type_border + & {
+	margin-top:31px;
     }
 }
 
@@ -1825,7 +1845,8 @@ body {
 }
 
 .section__body {
-    > .form {
+    > .form,
+    > .form > .basket_tab {
 	> .table_order:first-child {
 	    margin-top:-16px;
 	}

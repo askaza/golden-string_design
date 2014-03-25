@@ -207,6 +207,7 @@ p + h3 {
 .pure-content {
   font-size: 14px;
   line-height: 20px;
+  margin-bottom: 20px;
 }
 .pure-content h1 {
   font-size: 28px;
@@ -511,6 +512,7 @@ textarea {
   font-size: 14px;
   height: 24px;
   padding: 3px 8px;
+  vertical-align: top;
 }
 .field_type_textarea {
   background: #1c1810;
@@ -535,6 +537,17 @@ textarea {
   padding-left: 21px;
   line-height: 14px;
   font-size: 14px;
+  overflow: hidden;
+}
+.field-box_chbox .field_type_radio,
+.field-box_chbox .field_type_checkbox {
+  position: absolute;
+  left: 0;
+  top: 3px;
+}
+.field-box_chbox .field-label {
+  width: auto;
+  text-align: left !important;
 }
 .field_type_radio {
   background: url(../images/bg/form.png) no-repeat 0 0;
@@ -737,6 +750,9 @@ input[type="button"] {
 .information-message .date {
   color: #a18c56;
 }
+.information-message_freew {
+  width: auto;
+}
 /* information-message > */
 /* autocompleter < */
 .ui-helper-hidden-accessible {
@@ -895,6 +911,55 @@ input[type="button"] {
   vertical-align: middle;
   margin-left: 15px;
 }
+.form_feedback {
+  width: 258px;
+}
+.form_feedback .field-label {
+  white-space: nowrap;
+  width: auto;
+}
+.form_feedback .field_type_text,
+.form_feedback .field_type_textarea {
+  width: 240px;
+}
+.form_auth .form-fields__item > .field-label {
+  width: 205px;
+}
+.form_auth .field_type_text,
+.form_auth .field_type_textarea {
+  width: 280px;
+}
+.form_auth .link_forgot-pass {
+  float: right;
+  line-height: 30px;
+}
+.form_auth .information-message {
+  margin-left: 215px;
+}
+.form_auth .btnset {
+  width: 510px;
+}
+.form_auth .field-box {
+  line-height: 30px;
+}
+.field_type_code {
+  width: 90px !important;
+  margin: 5px 0 0 5px;
+}
+.form-fields_vertical .field-label {
+  display: block;
+  float: none;
+  margin-bottom: 4px;
+  width: auto;
+  text-align: left;
+}
+.form-fields_vertical .field_type_text,
+.form-fields_vertical .field_type_textarea {
+  width: 90%;
+}
+.column-content .form-fields__item {
+  margin-bottom: 10px;
+}
 /* layout < */
 body {
   background: #1f1913 url(../images/bg/body-bg.png) repeat;
@@ -915,6 +980,14 @@ body {
 .columns-layout_two .page-content {
   float: right;
   width: 700px;
+}
+.columns-layout_two .column-content {
+  margin-left: 10%;
+  width: 45%;
+  float: left;
+}
+.columns-layout_two .column-content:first-child {
+  margin: 0;
 }
 .sidebar .section,
 .page-content .section {
@@ -1333,6 +1406,14 @@ body {
 .section_type_border .section__footer .contact_number {
   color: #a18c56;
   font-size: 34px;
+}
+.section_action {
+  border-top: 1px solid #262119;
+  padding-top: 30px;
+  margin-top: 10px;
+}
+.section_type_border + .section_action {
+  margin-top: 31px;
 }
 /* section < */
 /* product < */
@@ -2433,7 +2514,8 @@ body {
 .table_order .link_action + .link_action {
   margin-left: 15px;
 }
-.section__body > .form > .table_order:first-child {
+.section__body > .form > .table_order:first-child,
+.section__body > .form > .basket_tab > .table_order:first-child {
   margin-top: -16px;
 }
 .order-check {

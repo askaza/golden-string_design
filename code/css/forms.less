@@ -59,7 +59,7 @@ textarea {
     font-size:14px;
     height:24px;
     padding: 3px 8px;
-
+    vertical-align: top;
 }
 
 .field_type_textarea {
@@ -89,6 +89,18 @@ textarea {
     padding-left:21px;
     line-height: 14px;
     font-size:14px;
+    overflow:hidden;
+
+    .field_type_radio,
+    .field_type_checkbox {
+	position: absolute;
+	left:0;
+	top:3px;
+    }
+    .field-label {
+	width:auto;
+	text-align: left !important;
+    }
 }
 .field_type_radio {
     background: url(../images/bg/form.png) no-repeat 0 0;
@@ -329,6 +341,9 @@ input[type="button"] {
 	color:#a18c56;
     }
 }
+.information-message_freew {
+    width:auto;
+}
 
 
 /* information-message > */
@@ -520,5 +535,70 @@ input[type="button"] {
 	display:inline-block;
 	vertical-align:middle;
 	margin-left:15px;
+    }
+}
+
+.form_feedback {
+    width:258px;
+
+    .field-label {
+	white-space:nowrap;
+	width:auto;
+    }
+    .field_type_text,
+    .field_type_textarea {
+	width:240px;
+    }
+}
+
+.form_auth {
+
+
+    .form-fields__item > .field-label {
+	width:205px;
+    }
+    .field_type_text,
+    .field_type_textarea {
+	width:280px;
+    }
+
+    .link_forgot-pass {
+	float:right;
+	line-height:30px;
+    }
+
+    .information-message {
+	margin-left:215px;
+    }
+
+    .btnset {
+	width:510px;
+    }
+    .field-box {
+	line-height:30px;
+    }
+}
+
+.field_type_code {
+    width:90px !important;
+    margin:5px 0 0 5px;
+}
+.form-fields_vertical {
+    .field-label {
+	display: block;
+	float:none;
+	margin-bottom:4px;
+	width: auto;
+	text-align: left;
+    }
+    .field_type_text,
+    .field_type_textarea {
+	width: 90%;
+    }
+}
+
+.column-content {
+    .form-fields__item {
+	margin-bottom:10px;
     }
 }
