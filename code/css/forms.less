@@ -139,6 +139,14 @@ textarea {
 .jq-selectbox.field_type_select {
     height:26px;
 }
+.jq-selectbox {
+    background:#1c1810;
+    border:1px solid #262119;
+    color:#77736B;
+    font-size:14px;
+    height:26px;
+    padding: 3px 8px;
+}
 .jq-selectbox__select {
 
 
@@ -397,6 +405,51 @@ input[type="button"] {
 }
 
 /* autocompleter > */
+
+/* datepicker < */
+
+.ui-datepicker {
+    width: 240px;
+    padding: 10px;
+    display: none;
+    background:#211D16;
+    overflow:visible;
+    webkit-box-shadow:0 0 27px 13px rgba(0,0,0,0.75);
+    -moz-box-shadow:  0 0 27px 13px rgba(0,0,0,0.75);
+    box-shadow:    0 0 27px 13px rgba(0,0,0,0.75);
+    border: 1px solid #282119;
+}
+.ui-datepicker-calendar {
+    width:100%;
+}
+.ui-datepicker-current-day a {
+    color:#fff;
+}
+.ui-datepicker-month,
+.ui-datepicker-year {
+    margin-bottom:10px;
+    width:105px;
+
+    .jq-selectbox{
+
+    }
+}
+.ui-datepicker-year {
+    margin-left:28px;
+    width:70px;
+}
+
+.ui-datepicker-prev  {
+    position:absolute;
+    color:@yellow;
+    top:5px;
+    left:0;
+}
+.ui-datepicker-prev,
+.ui-datepicker-next {
+ display:none;
+}
+/* datepicker > */
 
 /* errors < */
 

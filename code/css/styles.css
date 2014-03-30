@@ -139,6 +139,9 @@ nav,
 section {
   display: block;
 }
+:focus {
+  outline: 0;
+}
 /* reset > */
 /* constants < */
 /* colors > */
@@ -580,6 +583,14 @@ textarea {
 .jq-selectbox.field_type_select {
   height: 26px;
 }
+.jq-selectbox {
+  background: #1c1810;
+  border: 1px solid #262119;
+  color: #77736B;
+  font-size: 14px;
+  height: 26px;
+  padding: 3px 8px;
+}
 .jq-selectbox__select-text {
   margin-right: 30px;
   line-height: 26px;
@@ -799,6 +810,44 @@ input[type="button"] {
   color: #A18C56;
 }
 /* autocompleter > */
+/* datepicker < */
+.ui-datepicker {
+  width: 240px;
+  padding: 10px;
+  display: none;
+  background: #211D16;
+  overflow: visible;
+  webkit-box-shadow: 0 0 27px 13px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 0 27px 13px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 27px 13px rgba(0, 0, 0, 0.75);
+  border: 1px solid #282119;
+}
+.ui-datepicker-calendar {
+  width: 100%;
+}
+.ui-datepicker-current-day a {
+  color: #fff;
+}
+.ui-datepicker-month,
+.ui-datepicker-year {
+  margin-bottom: 10px;
+  width: 105px;
+}
+.ui-datepicker-year {
+  margin-left: 28px;
+  width: 70px;
+}
+.ui-datepicker-prev {
+  position: absolute;
+  color: #bc942f;
+  top: 5px;
+  left: 0;
+}
+.ui-datepicker-prev,
+.ui-datepicker-next {
+  display: none;
+}
+/* datepicker > */
 /* errors < */
 .field_state_error {
   border-color: #a83f3f;
@@ -1067,11 +1116,16 @@ body {
   text-align: right;
 }
 .auth .auth__action {
-  color: #bc942f;
   display: inline-block;
   vertical-align: top;
   margin-left: 14px;
   letter-spacing: normal;
+}
+.auth .auth__action.link {
+  color: #bc942f;
+}
+.auth .auth__action.status {
+  margin-top: -8px;
 }
 .header {
   background: url(../images/bg/header-bg.png) no-repeat 50% -31px;
@@ -2096,19 +2150,6 @@ body {
   margin: -6px 0 5px;
   text-decoration: line-through;
 }
-.product__price-box .bonus {
-  color: #77736b;
-  font-family: 'open_sanslight_italic', Tahoma, sans-serif;
-  font-size: 12px;
-  max-width: 215px;
-}
-.product__price-box .bonus .bonus__value {
-  font-size: 18px;
-  font-weight: normal;
-}
-.product__price-box .bonus .link {
-  color: #bc942f;
-}
 .product__price-box_special {
   min-height: 110px;
   padding-right: 200px;
@@ -2501,6 +2542,21 @@ body {
   background: url(../images/bg/order-steps.png) no-repeat 100% -38px;
 }
 /* order-steps > */
+/* bonus < */
+.bonus {
+  color: #77736b;
+  font-family: 'open_sanslight_italic', Tahoma, sans-serif;
+  font-size: 12px;
+  max-width: 215px;
+}
+.bonus .bonus__value {
+  font-size: 18px;
+  font-weight: normal;
+}
+.bonus .link {
+  color: #bc942f;
+}
+/* bonus > */
 /* table_order < */
 .table_order {
   margin-bottom: 15px;
@@ -2570,13 +2626,8 @@ body {
 .order-check .bonus {
   margin-top: 4px;
   margin-bottom: 30px;
-  color: #77736b;
   font-family: 'open_sanslight_italic', Tahoma, sans-serif;
-  font-size: 12px;
-}
-.order-check .bonus .bonus__value {
-  font-weight: normal;
-  font-size: 18px;
+  max-width: 410px;
 }
 .order-check .order-price_total {
   margin-bottom: 25px;
@@ -2667,9 +2718,26 @@ body {
   background: #1c1810;
   margin: 15px 0 -21px;
 }
-.user-menu_type_main {
+.user-panel {
   background: #1c1810;
   border: 1px solid #282119;
+  position: relative;
+  height: 46px;
+  overflow: hidden;
+}
+.user-panel .user-bonus {
+  position: absolute;
+  top: 4px;
+  right: 20px;
+}
+.user-panel .bonus {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 19px;
+  margin-left: 15px;
+}
+.user-panel .bonus .bonus__value {
+  display: block;
 }
 .user-menu_type_main .user-menu__item {
   margin: 0;
@@ -2712,3 +2780,32 @@ body {
   margin-top: 20px;
 }
 /* tooltip> */
+/* status < */
+.status {
+  background: url(../images/bg/status-bg.png) no-repeat 0 0;
+  height: 34px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 11px;
+  color: #d5be82;
+  line-height: 34px;
+  padding-left: 37px;
+  text-align: left;
+  width: 160px;
+}
+.status_silver {
+  background: url(../images/bg/status-bg.png) no-repeat 0 -34px;
+  color: #fff;
+  width: 134px;
+}
+.status_gold {
+  background: url(../images/bg/status-bg.png) no-repeat 0 -68px;
+  color: #fff;
+  width: 134px;
+}
+.status_platinum {
+  background: url(../images/bg/status-bg.png) no-repeat 0 -102px;
+  color: #fff;
+  width: 134px;
+}
+/* status > */

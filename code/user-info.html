@@ -17,6 +17,7 @@
 
     <script src="js/jquery-1.10.0.min.js"></script>
     <script src="js/gradienttext.js"></script>
+    <script src="js/datepicker.local.js"></script>
     <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
     <script src="js/jquery.slides.min.js"></script>
     <script src="js/jquery.formstyler.min.js"></script>
@@ -25,11 +26,20 @@
     <script>
 	$(function() {
 
-
-
 	    $('.section__title').gradientText({
 		colors: ['#4e493b', '#b4923b']
 	    });
+
+	    $.datepicker.setDefaults( $.datepicker.regional[ "ru" ] );
+
+	     $( ".field_type_date" ).datepicker({
+		  changeMonth: true,
+		  changeYear: true,
+
+		    afterShow:function() {
+		    $('.ui-datepicker-year, .ui-datepicker-month').styler();
+		    }
+	     });
 
 	});
     </script>
@@ -131,11 +141,20 @@
 		    <li class="breadcrumbs__item"><a href="#" class="link">Главная</a> </li>
 		    <li class="breadcrumbs__item">Корзина</li>
 		</ul>
-		<ul class="user-menu user-menu_type_main">
-		    <li class="user-menu__item user-menu__item_current"><a href="#" class="link">Мои настройки</a></li>
-		    <li class="user-menu__item"><a href="#" class="link">Мои заказы</a></li>
-		    <li class="user-menu__item"><a href="#" class="link">Корзина</a></li>
-		</ul>
+		<div class="user-panel">
+		    <ul class="user-menu user-menu_type_main">
+			<li class="user-menu__item user-menu__item_current"><a href="#" class="link">Мои настройки</a></li>
+			<li class="user-menu__item"><a href="#" class="link">Мои заказы</a></li>
+			<li class="user-menu__item"><a href="#" class="link">Корзина</a></li>
+		    </ul>
+		    <div class="user-bonus">
+			 <a href="#" class="status status_silver">Узнай про свои скидки</a>
+			 <div class="bonus">
+			     <strong class="bonus__value">889 руб.</strong>
+			     на Вашем <a href="#" class="link link_action">бонусном счету</a>
+			 </div>
+		    </div>
+		</div>
 
 		<div class="columns-layout columns-layout_wide">
 		    <div class="page-content"> <!-- .page-content -->
@@ -171,6 +190,16 @@
 					    <div class="field-box">
 						<input type="text" class="field field_type_text"/>
 					    </div>
+					</li>
+					<li class="form-fields__item">
+					    <label class="field-label">Дата рождения</label>
+					    <div class="field-box">
+						<input type="text" class="field field_type_text field_type_date"/>
+					    </div>
+					    <small class="information-message">
+						<i class="ico ico_message_info"></i>
+						<span class="information-message__text">Укажите дату своего рождения, чтобы мы могли делать Вам сюрпризы и подарки в Ваш день рождения</span>
+					    </small>
 					</li>
 					<li class="form-fields__item">
 					    <label class="field-label field-label_required">E-mail</label>

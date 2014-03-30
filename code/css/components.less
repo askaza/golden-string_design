@@ -86,11 +86,18 @@ body {
     text-align: right;
 
     .auth__action {
-        color:@yellow;
         display:inline-block;
         vertical-align: top;
         margin-left:14px;
         letter-spacing: normal;
+
+	&.link {
+	    color:@yellow;
+	}
+
+	&.status {
+	      margin-top:-8px;
+	}
     }
 
 }
@@ -1318,20 +1325,6 @@ body {
 	margin: -6px 0 5px;
 	text-decoration:line-through;
     }
-    .bonus {
-	color:#77736b;
-	font-family:@font-family-opensans-light-it;
-	font-size:12px;
-	max-width:215px;
-
-	.bonus__value {
-	    font-size:18px;
-	    font-weight:normal;
-	}
-	.link {
-	    color:@yellow;
-	}
-    }
 }
 .product__price-box_special {
     min-height: 110px;
@@ -1786,6 +1779,24 @@ body {
 
 /* order-steps > */
 
+/* bonus < */
+
+ .bonus {
+	color:#77736b;
+	font-family:@font-family-opensans-light-it;
+	font-size:12px;
+	max-width:215px;
+
+	.bonus__value {
+	    font-size:18px;
+	    font-weight:normal;
+	}
+	.link {
+	    color:@yellow;
+	}
+    }
+/* bonus > */
+
 /* table_order < */
 
 .table_order {
@@ -1865,17 +1876,12 @@ body {
     .savings__value {
 	color:#a18c56;
     }
+
     .bonus {
 	margin-top:4px;
 	margin-bottom:30px;
-	color:#77736b;
 	font-family:@font-family-opensans-light-it;
-	font-size:12px;
-
-	.bonus__value {
-	    font-weight:normal;
-	    font-size:18px;
-	}
+	max-width:410px;
     }
     .order-price_total {
 	margin-bottom:25px;
@@ -1987,9 +1993,30 @@ body {
     margin:15px 0 -21px;
 }
 
-.user-menu_type_main {
+.user-panel {
     background:#1c1810;
     border:1px solid #282119;
+    position:relative;
+    height:46px;
+    overflow:hidden;
+
+    .user-bonus {
+	position:absolute;
+	top:4px;
+	right:20px;
+    }
+    .bonus {
+	display:inline-block;
+	vertical-align:top;
+	line-height:19px;
+	margin-left:15px;
+
+	.bonus__value {
+	    display:block;
+	}
+    }
+}
+.user-menu_type_main {
 
     .user-menu__item {
 	margin:0;
@@ -2041,3 +2068,35 @@ body {
 }
 
 /* tooltip> */
+
+/* status < */
+
+.status {
+    background:url(../images/bg/status-bg.png) no-repeat 0 0;
+    height:34px;
+    display:inline-block;
+    vertical-align:top;
+    font-size:11px;
+    color:#d5be82;
+    line-height:34px;
+    padding-left:37px;
+    text-align:left;
+    width:160px;
+}
+
+.status_silver {
+    background:url(../images/bg/status-bg.png) no-repeat 0 -34px;
+    color:#fff;
+    width:134px;
+}
+.status_gold {
+    background:url(../images/bg/status-bg.png) no-repeat 0 -68px;
+    color:#fff;
+    width:134px;
+}
+.status_platinum {
+    background:url(../images/bg/status-bg.png) no-repeat 0 -102px;
+    color:#fff;
+    width:134px;
+}
+/* status > */
