@@ -298,6 +298,7 @@ p + h3 {
   color: #a18c56;
   padding-left: 15px;
   position: relative;
+  list-style: none;
 }
 .pure-content ol {
   list-style: decimal;
@@ -311,6 +312,21 @@ p + h3 {
 }
 .pure-content p + p {
   margin-top: 20px;
+}
+.pure-content p + h2,
+.pure-content p + h3,
+.pure-content p + h4,
+.pure-content p + h5 {
+  margin-top: 20px;
+}
+.pure-content .map-columns li {
+  margin-bottom: 15px;
+}
+.pure-content .map-columns a {
+  text-transform: none;
+}
+.pure-content .map-columns td {
+  border: 0;
 }
 table {
   margin-bottom: 15px;
@@ -966,10 +982,11 @@ input[type="button"] {
   font-size: 16px;
   line-height: 20px;
 }
-.pack-type .thumbnail {
+.pack-type .pack-type__thumbnail {
   border-color: #383225;
   display: block;
   margin: 0 auto 8px;
+  border-width: 3px;
 }
 .pack-type .pack-type__name {
   display: block;
@@ -1010,12 +1027,14 @@ input[type="button"] {
 .pack-variants_3col .pack-type {
   padding: 0 15px 15px;
 }
-.pack-variants_3col .pack-type__thumbnail {
-  border-color: #bc942f;
-  border-width: 3px;
-}
 .pack-variants_3col .pack-type__name {
   font-size: 14px;
+}
+.pack-variants__item_active .pack-type__thumbnail {
+  border-color: #bc942f;
+}
+.pack-variants__item_active .pack-type__name {
+  color: #bc942f;
 }
 /* pack-type > */
 .form_comment .field-label {
@@ -1285,6 +1304,9 @@ body {
   color: #fff;
   display: inline;
   text-transform: uppercase;
+}
+.main-nav .menu_main .menu__link.additional {
+  color: #bc942f;
 }
 .menu_catalog .menu__item {
   display: block;
@@ -1987,7 +2009,8 @@ body {
   text-align: center;
   text-transform: uppercase;
   line-height: 23px;
-  width: 23px;
+  min-width: 19px;
+  padding: 0 3px;
 }
 .filter-list.filter-list_sizes .filter-list__item_current .link,
 .filter-list.filter-list_sizes .filter-list__item:hover .link {
@@ -2665,6 +2688,7 @@ body {
   float: right;
   text-align: right;
   width: 410px;
+  margin-bottom: 30px;
 }
 .order-check .savings {
   margin-top: 20px;
@@ -2730,6 +2754,7 @@ body {
 .order-bonus {
   float: left;
   max-width: 500px;
+  margin-bottom: 30px;
 }
 .promo-code .field-label {
   float: none;
@@ -2841,22 +2866,22 @@ body {
   line-height: 34px;
   padding-left: 37px;
   text-align: left;
-  width: 160px;
+  width: 205px;
 }
 .status_silver {
   background: url(../images/bg/status-bg.png) no-repeat 0 -34px;
   color: #fff;
-  width: 134px;
+  width: 103px;
 }
 .status_gold {
   background: url(../images/bg/status-bg.png) no-repeat 0 -68px;
   color: #fff;
-  width: 134px;
+  width: 103px;
 }
 .status_platinum {
   background: url(../images/bg/status-bg.png) no-repeat 0 -102px;
   color: #fff;
-  width: 134px;
+  width: 123px;
 }
 /* status > */
 /* user-status < */

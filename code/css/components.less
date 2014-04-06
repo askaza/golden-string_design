@@ -227,6 +227,10 @@ body {
             color:#fff;
             display: inline;
             text-transform: uppercase;
+
+          &.additional {
+            color:@yellow;
+          }
         }
     }
 }
@@ -1085,7 +1089,8 @@ body {
 		text-align:center;
 		text-transform:uppercase;
 		line-height:23px;
-		width:23px;
+		min-width:19px;
+          padding: 0 3px;
 	    }
 	}
 	.filter-list__item_current,
@@ -1868,6 +1873,7 @@ body {
     float:right;
     text-align:right;
     width:410px;
+  margin-bottom:30px;
 
     .savings {
 	margin-top:20px;
@@ -1941,6 +1947,7 @@ body {
 .order-bonus {
     float:left;
     max-width:500px;
+    margin-bottom: 30px;
 }
 .promo-code {
     .field-label {
@@ -2081,23 +2088,23 @@ body {
     line-height:34px;
     padding-left:37px;
     text-align:left;
-    width:160px;
+    width:205px;
 }
 
 .status_silver {
     background:url(../images/bg/status-bg.png) no-repeat 0 -34px;
     color:#fff;
-    width:134px;
+    width:103px;
 }
 .status_gold {
     background:url(../images/bg/status-bg.png) no-repeat 0 -68px;
     color:#fff;
-    width:134px;
+    width:103px;
 }
 .status_platinum {
     background:url(../images/bg/status-bg.png) no-repeat 0 -102px;
     color:#fff;
-    width:134px;
+    width:123px;
 }
 /* status > */
 
@@ -2289,3 +2296,4 @@ body {
     }
 }
 /* user-status > */
+

@@ -530,11 +530,11 @@ input[type="button"] {
 	font-size:16px;
 	line-height:20px;
     }
-    .thumbnail {
+  .pack-type__thumbnail {
 	border-color:#383225;
 	display:block;
 	margin:0 auto 8px;
-
+      border-width: 3px;
     }
 
     .pack-type__name {
@@ -580,13 +580,19 @@ input[type="button"] {
     .pack-type {
 	padding:0 15px 15px;
     }
-    .pack-type__thumbnail {
-	border-color:@yellow;
-	border-width:3px;
-    }
+
     .pack-type__name {
 	font-size:14px;
     }
+}
+
+.pack-variants__item_active {
+  .pack-type__thumbnail {
+    border-color:@yellow;
+  }
+  .pack-type__name {
+    color:@yellow;
+  }
 }
 
 /* pack-type > */
