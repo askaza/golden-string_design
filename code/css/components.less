@@ -2353,3 +2353,83 @@ body {
 }
 
 /* */
+
+.preview_info {
+    background: #221b08;
+    border-top: 1px solid #282119;
+    padding:14px;
+    overflow: visible;
+    
+    .preview__content {
+	display: table-cell;
+	overflow: visible;
+	padding-left: 20px;
+	vertical-align: top;
+	color:@color-text;
+    }
+    .preview__thumbnail {
+	display: table-cell;
+	float: none;		
+	text-align: center;
+	vertical-align: bottom;
+	width: 190px;
+	
+	img {
+	    margin-bottom: 10px;
+	}
+    }
+    
+    .details {
+	background:#1e1706;
+	padding:16px 20px 20px 20px;
+	
+	.field-label {
+	    float:none;
+	    display: block;
+	    margin-bottom: 10px;
+	}
+	.field-box {
+	    display: inline-block;
+	    vertical-align: top;
+	    
+	    .field {
+		background: #211d16;
+		color: #6d6a66;
+		height: 22px;
+		margin-right: 7px;
+		width: 282px;
+	    }
+	}
+    }
+}
+
+.preview_payment {
+    .preview__thumbnail {
+	vertical-align: middle;
+    }
+    .thumbnail {
+	display: inline-block;
+	vertical-align: middle;
+    }
+}
+
+.delivery-details {
+    margin-bottom: 5px;
+    
+    .delivery-details__name, 
+    .delivery-details__value {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 4px;
+	font-size:14px;
+    }
+    
+    .delivery-details__name {
+	color: #77736b;
+	font-family: @font-family-opensans-semibold;
+    }
+    .delivery-details__value {
+	color: #7f6e41;
+	font-family: @font-family-opensans-bold;
+    }
+}

@@ -58,3 +58,7 @@
 .colorbox-content_user-order .order-price_total dd {
     font-family: 'open_sanslight';
 }
+
+.colorbox-content_delivery-info {
+    width: 460px;
+}
