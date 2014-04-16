@@ -2433,3 +2433,125 @@ body {
 	font-family: @font-family-opensans-bold;
     }
 }
+
+/* how to order steps < */
+
+.section_type_step {
+    margin-top: 30px;
+    
+    .section__header {
+	background: url(../images/bg/steps-bg.png) no-repeat 0 0;
+	height: 98px;
+	margin: 0 -20px;
+	padding: 0;
+	position: relative;
+    }
+    .step-title {
+	font-size: 30px;
+	color:#fff;
+	padding-top: 26px;
+	padding-left: 70px;
+	
+	.marked {
+	    color: #b38d2d;
+	}
+    }
+    .step-number {
+	background: url(../images/bg/order-steps-number.png) no-repeat 0 0;
+	color: #302716;
+	font-size: 30px;
+	line-height: 40px;
+	text-align: center;
+	position: absolute;
+	height: 40px;
+	top:28px;
+	left:19px;
+	width:40px;
+    }
+    .order-step-ico {
+	position: absolute;
+	right: 15px;
+    }
+}
+
+.order-substeps {
+    margin: 20px -20px 15px;
+    overflow:hidden;
+    
+    .order-substeps__item {
+	float: left;
+	border-left: 1px dashed #282119;
+	padding: 0 20px;
+	width: 190px;
+	
+	&:first-child {
+	    border: 0;
+	}
+    }
+    
+    .order-substep-img {
+	height: 155px;
+	display: table-cell;
+	vertical-align: bottom;
+	text-align: center;
+	padding-bottom: 10px;
+	width: 190px;
+    }
+    .order-substep-text {
+	color: #b38d2d;
+	font-size: 20px;
+	text-align: center;
+    }
+}
+
+.section_type_step_1 {
+    .order-step-ico {
+	background: url(../images/bg/order-steps-1.png) no-repeat 0 0;
+	height: 78px;
+	top:10px;
+	width: 134px;
+    }
+}
+.section_type_step_2 {
+    .order-step-ico {
+	background: url(../images/bg/order-steps-2.png) no-repeat 0 0;
+	height: 80px;
+	top:10px;
+	width: 160px;
+    }
+    .order-substep-img {
+	height: 110px;
+    }
+}
+.section_type_step_3 {
+    .order-step-ico {
+	background: url(../images/bg/order-steps-3.png) no-repeat 0 0;
+	height: 77px;
+	top:10px;
+	width: 129px;
+    }
+    .order-substep-img {
+	height: 130px;
+    }
+}
+.tel-large {
+    color: #a18c56;
+    font-size: 26px;
+    display: block;
+    font-weight: normal;
+    font-family: @font-family-opensans-bold;
+    line-height: 1.5;
+}
+h4.slogan {
+    font-family: @font-family-opensans-semibold;
+    color: #aaa7a3;
+    font-size: 16px;
+    margin:15px 0 20px;
+    
+    span {
+	display: block;
+	color:#a18c56;
+	font-size: 16px;
+    }
+}
+/* how to order steps > */
